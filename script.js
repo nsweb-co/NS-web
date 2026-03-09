@@ -1,178 +1,598 @@
+/**
+ * NS STUDIO - Clean Minimalist Script
+ * Handles blur reveal animations, spotlight hover effects, and minimal timeline logic.
+ */
+
 const translations = {
     cs: {
-        nav_about: "O nás",
-        nav_lab: "Laboratoř",
-        nav_projects: "Projekty",
-        nav_socials: "Sociální sítě",
-        hero_title: 'Budujeme moderní <span class="text-orange">digitální projekty</span>',
-        hero_desc: "Studentský technologický projekt zaměřený na učení programování a experimentování s technologiemi.",
-        hero_btn_projects: "Projekty",
-        hero_btn_about: "O nás",
-        about_title: "O nás",
-        about_p1: "NS STUDIO je studentský technologický projekt vedený dvěma motivovanými studenty. Naším cílem je učit se programovat, experimentovat s novými technologiemi a stavět zajímavé projekty.",
-        about_p2: "Nejsme komerční firma, ale prostor pro kreativitu a technické objevování. Vše, co tvoříme, vychází z našeho zájmu o moderní web a software.",
-        about_feat1_title: "Vzdělávání",
-        about_feat1_desc: "Soustředíme se na hluboké porozumění principům vývoje.",
-        about_feat2_title: "Experimenty",
-        about_feat2_desc: "Zkoušíme nové nástroje a postupy přímo v praxi.",
-        lab_title: "Lab / Experimenty",
-        lab_desc: "Zde testujeme naše nejdivočejší nápady. Od minimalistických frameworků až po automatizační skripty.",
-        lab_item1_title: "JS Engine",
-        lab_item1_desc: "Pokusy o optimalizaci vykreslování v prohlížeči.",
-        lab_item2_title: "Automation",
-        lab_item2_desc: "Skripty pro zjednodušení každodenních vývojářských úkolů.",
-        opensource_title: "Open Source",
-        opensource_desc: "Věříme v sílu sdílení. Naše experimenty a projekty publikujeme jako open-source, aby se z nich mohli učit i ostatní.",
-        devlog_title: "Dev Log",
-        devlog_1: "Spuštění nového webu a definice učebních cílů.",
-        devlog_2: "První úspěšné experimenty s Node.js backendem.",
-        tech_title: "Tech Stack",
-        goals_title: "Cíle učení",
-        goal1: "Zlepšování programátorských dovedností",
-        goal2: "Průzkum nových technológii",
-        goal3: "Tvorba kreativních nástrojů",
-        projects_title: "Projekty",
-        project1_desc: "Nástroj pro správu úkolů a týmovou koordinaci.",
-        project2_desc: "Designový systém pro moderní webové aplikace.",
-        team_title: "Tým",
-        team_role_1: "Student Developer",
-        team_desc_1: "Student developer zaměřený na programování a technologie.",
-        team_role_2: "Student Developer",
-        team_desc_2: "Student developer zaměřený na programování a technologie.",
-        socials_title: "Sociální sítě",
-        socials_card_text: "SPOJ<br><br>SE<br><br>S<br><br>NÁMI",
-        contact_title: "Kontakt",
-        contact_desc: "Chcete se zapojit nebo se na něco zeptat?",
-        contact_btn: "Odeslat",
-        placeholder_name: "Jméno",
-        placeholder_email: "Email",
-        placeholder_message: "Zpráva",
-        footer_disclaimer: "NS STUDIO je studentský technologický projekt vytvořený pro učení a experimentování."
+        stat_projects: "Projekty",
+        stat_founders: "Studenti",
+        stat_weeks: "Týdny do spuštění",
+        nav_services: "Služby",
+        nav_portfolio: "Práce",
+        nav_process: "Proces",
+        nav_contact: "Kontakt",
+        hero_eyebrow: "Engineering Elegance",
+        hero_h1_pt1: "Quiet Luxury pro vaši",
+        hero_h1_pt2: "Digitální Prezentaci.",
+        hero_desc: "Dva studenti. Nekonečné nápady. Tvoříme ostré, minimalistické weby, které nechávají dýchat váš obsah. Žádný zbytečný hluk – jen čistý kód, perfektní typografie a design, který mluví sám za sebe.",
+        hero_btn: "Prozkoumat služby",
+        services_title: "Co Přesně Děláme",
+        card1_title: "Weby Od Nuly",
+        card1_sub: "Pro ty, co začínají",
+        card1_desc: "Navrhneme a postavíme čistý, rychlý a moderní web na zelené louce. Maximální využití prázdného prostoru a ostré typografie.",
+        card2_title: "Redesigny",
+        card2_sub: "Pro ty, co už web mají",
+        card2_desc: "Očistíme vaši prezentaci od zbytečných vrstev. Proměníme zastaralý vzhled v prémiový, technologicky vybroušený zážitek.",
+        portfolio_title: "Naše Práce",
+        portfolio_sub: "Ověřené koncepty fungující v praxi",
+        process_title: "Jak To Probíhá",
+        step1_title: "01 / Discovery Call",
+        step1_desc: "Probereme vaši vizi a najdeme společnou reč. Jednoduché a k věci.",
+        step2_title: "02 / Design & Wireframing",
+        step2_desc: "Vytvoříme precizní návrh zaměřený na obsah a čistotu rozhraní.",
+        step3_title: "03 / Development",
+        step3_desc: "Píšeme čistý kód. Důraz na ohromující výkon a plynulé interakce.",
+        step4_title: "04 / Launch",
+        step4_desc: "Finální testování a spuštění. Váš \"quiet luxury\" web ožívá.",
+        contact_title: "Začněme tvořit.",
+        contact_subtitle: "Hledáte design, který nekřičí, ale rezonuje?",
+        contact_btn: "hello@nsstudio.tech",
+        team_title: "Kdo Za Tím Stojí",
+        team_sub: "Dva studenti s jedním cílem",
+        team_photo_soon: "Foto brzy",
+        team1_role: "Design & Frontend",
+        team1_bio: "Zaměřený na vizuální preciznost a čistý kód. Designuje systémy, které vypadají prémiově a fungují perfektně.",
+        team2_role: "Development & Strategy",
+        team2_bio: "Staví rychlé, optimalizované weby od základů. Řeší technickou stránku věci, aby výsledek byl vždy spolehlivý.",
+        skills_title: "Co Umíme",
+        skill1_desc: "Sémantický kód, čisté styly. Žádné zbytečné knihovny — jen základ, co létá.",
+        skill2_desc: "Animace, interakce, logika. Vanilla JS i moderní frameworky bez zbytečné složitosti.",
+        skill3_desc: "Komponenty, state management a rychlé SPA. Vite + React pro moderní projekty.",
+        skill4_desc: "Verzování, pull requesty a CI/CD pipeline. Kód je vždy pod kontrolou a dohledatelný.",
+        skill5_desc: "DNS, SSL certifikát a nasazení na vlastní doménu. Váš web je online do 24 hodin.",
+        skill6_desc: "Wireframy, prototypy a handoff. Design systém domluveny ještě před napsáním prvního řádku kódu.",
+        faq_title: "Časté Otázky",
+        faq1_q: "Kolik stojí nový web?",
+        faq1_a: "Cenu vždy nastavujeme individuálně podle rozsahu projektu. Základní landing page začíná od 5 000 Kč, komplexnější prezentační weby od 10 000 Kč. Ozvi se a domluvíme se.",
+        faq2_q: "Jak dlouho trvá výroba webu?",
+        faq2_a: "Jednoduchý web zpravidla do 2–3 týdnů od prvního callů. U větších projektů počítej s 4–6 týdnů. Záleží na rozsahu a rychlosti tvé zpěbné vazby.",
+        faq3_q: "Děláte e-shopy?",
+        faq3_a: "E-shopy řešíme po domlluvě. Kontaktuj nás a popište rozsah projektu — rádi se domluvíme.",
+        faq4_q: "Co potřebuji mít připravené?",
+        faq4_a: "Stačí mít představu o tom, co chcete sdělit, a ideálně logo nebo brand guide. Vše ostatní vyřešíme společně.",
+        faq5_q: "Budu moci web sám upravovat?",
+        faq5_a: "Ano. Pokud potřebuješ jedním jednoduché úpravy obsahu samostatně, zapojíme CMS. U statických webů vám poskytneme základní instrukce.",
+        form_name: "Jméno",
+        form_email: "E-mail",
+        form_msg: "Zpráva",
+        form_send: "Odeslat zprávu",
+        form_success: "Zpráva byla úspěšně odeslána! Ozveme se vám brzy.",
+        form_error: "Omlouváme se, při odesílání došlo k chybě. Zkuste to prosím znovu."
     },
     en: {
-        nav_about: "About",
-        nav_lab: "Lab",
-        nav_projects: "Projects",
-        nav_socials: "Socials",
-        hero_title: 'Building modern <span class="text-orange">digital projects</span>',
-        hero_desc: "A student technology project focused on learning programming and experimenting with technology.",
-        hero_btn_projects: "Projects",
-        hero_btn_about: "About Us",
-        about_title: "About Us",
-        about_p1: "NS STUDIO is a student technology project led by two motivated students. Our goal is to learn programming, experiment with new technologies, and build interesting projects.",
-        about_p2: "We are not a commercial company, but a space for creativity and technical discovery. Everything we create comes from our interest in the modern web and software.",
-        about_feat1_title: "Education",
-        about_feat1_desc: "We focus on a deep understanding of development principles.",
-        about_feat2_title: "Experiments",
-        about_feat2_desc: "We try new tools and processes directly in practice.",
-        lab_title: "Lab / Experiments",
-        lab_desc: "Here we test our wildest ideas. From minimalist frameworks to automation scripts.",
-        lab_item1_title: "JS Engine",
-        lab_item1_desc: "Attempts to optimize browser rendering.",
-        lab_item2_title: "Automation",
-        lab_item2_desc: "Scripts to simplify everyday developer tasks.",
-        opensource_title: "Open Source",
-        opensource_desc: "We believe in the power of sharing. We publish our experiments and projects as open-source so others can learn from them.",
-        devlog_title: "Dev Log",
-        devlog_1: "Launch of the new website and definition of learning goals.",
-        devlog_2: "First successful experiments with Node.js backend.",
-        tech_title: "Tech Stack",
-        goals_title: "Learning Goals",
-        goal1: "Improving programming skills",
-        goal2: "Exploring new technologies",
-        goal3: "Building creative tools",
-        projects_title: "Projects",
-        project1_desc: "A tool for task management and team coordination.",
-        project2_desc: "A design system for modern web applications.",
-        team_title: "Team",
-        team_role_1: "Student Developer",
-        team_desc_1: "Student developer interested in programming and modern technologies.",
-        team_role_2: "Student Developer",
-        team_desc_2: "Student developer interested in programming and modern technologies.",
-        socials_title: "Socials",
-        socials_card_text: "CONNECT<br><br>WITH<br><br>US",
-        contact_title: "Contact",
-        contact_desc: "Want to get involved or ask something?",
-        contact_btn: "Send",
-        placeholder_name: "Name",
-        placeholder_email: "Email",
-        placeholder_message: "Message",
-        footer_disclaimer: "NS STUDIO is a student technology project created for learning and experimentation."
+        stat_projects: "Projects",
+        stat_founders: "Students",
+        stat_weeks: "Weeks to launch",
+        nav_services: "Services",
+        nav_portfolio: "Work",
+        nav_process: "Process",
+        nav_contact: "Contact",
+        hero_eyebrow: "Engineering Elegance",
+        hero_h1_pt1: "Quiet Luxury for your",
+        hero_h1_pt2: "Digital Presence.",
+        hero_desc: "Two students. Endless ideas. We build sharp, minimalist websites that let your content breathe. No unnecessary noise—just clean code, perfect typography, and design that speaks for itself.",
+        hero_btn: "Explore Services",
+        services_title: "What We Do",
+        card1_title: "Websites from Scratch",
+        card1_sub: "For those starting out",
+        card1_desc: "We design and build clean, fast, and modern websites from the ground up. Maximum use of negative space and sharp typography.",
+        card2_title: "Redesigns",
+        card2_sub: "For those who already have a site",
+        card2_desc: "We strip your presentation of unnecessary layers. Transforming an outdated look into a premium, technologically polished experience.",
+        portfolio_title: "Our Work",
+        portfolio_sub: "Proven concepts working in practice",
+        process_title: "How It Works",
+        step1_title: "01 / Discovery Call",
+        step1_desc: "We discuss your vision and find common ground. Simple and straight to the point.",
+        step2_title: "02 / Design & Wireframing",
+        step2_desc: "We create a precise design focused on content and interface clarity.",
+        step3_title: "03 / Development",
+        step3_desc: "We write clean code. Emphasis on stunning performance and smooth interactions.",
+        step4_title: "04 / Launch",
+        step4_desc: "Final testing and deployment. Your \"quiet luxury\" website comes to life.",
+        contact_title: "Let's start building.",
+        contact_subtitle: "Looking for a design that resonates without shouting?",
+        contact_btn: "hello@nsstudio.tech",
+        team_title: "Who's Behind It",
+        team_sub: "Two students, one goal",
+        team_photo_soon: "Photo soon",
+        team1_role: "Design & Frontend",
+        team1_bio: "Focused on visual precision and clean code. Designs systems that look premium and work flawlessly.",
+        team2_role: "Development & Strategy",
+        team2_bio: "Builds fast, optimized sites from the ground up. Handles the technical side so the result is always reliable.",
+        skills_title: "What We Know",
+        skill1_desc: "Semantic code, clean styles. No unnecessary libraries — just the foundation that flies.",
+        skill2_desc: "Animations, interactions, logic. Vanilla JS and modern frameworks without unnecessary complexity.",
+        skill3_desc: "Components, state management and fast SPAs. Vite + React for modern projects.",
+        skill4_desc: "Versioning, pull requests and CI/CD pipeline. Code is always under control and traceable.",
+        skill5_desc: "DNS, SSL certificate and deployment to a custom domain. Your site is online within 24 hours.",
+        skill6_desc: "Wireframes, prototypes and handoff. Design system agreed before the first line of code is written.",
+        faq_title: "FAQ",
+        faq1_q: "How much does a website cost?",
+        faq1_a: "We price each project individually based on scope. A basic landing page starts from 5,000 CZK, more complex presentation sites from 10,000 CZK. Get in touch and we'll work it out.",
+        faq2_q: "How long does a website take?",
+        faq2_a: "A simple site is usually done in 2–3 weeks from the first call. For larger projects count on 4–6 weeks. It depends on scope and how fast you can give feedback.",
+        faq3_q: "Do you build e-shops?",
+        faq3_a: "E-commerce projects are handled by arrangement. Contact us and describe your project scope — we'll be happy to discuss what makes sense for your business.",
+        faq4_q: "What do I need to have ready?",
+        faq4_a: "Just an idea of what you want to say, and ideally a logo or brand guide. Everything else — copy, photos, structure — we sort out together on the discovery call.",
+        faq5_q: "Will I be able to edit the site myself?",
+        faq5_a: "Yes. If you need simple content edits on your own, we\'ll add a CMS like Sanity or Webflow. For static sites we\'ll provide basic instructions.",
+        form_name: "Name",
+        form_email: "Email",
+        form_msg: "Message",
+        form_send: "Send message",
+        form_success: "Message sent successfully! We\'ll get back to you soon.",
+        form_error: "Sorry, there was an error sending your message. Please try again."
     }
 };
 
-// Language logic
-let currentLang = localStorage.getItem('ns-studio-lang') || 'cs';
+let currentLang = localStorage.getItem('ns-studio-clean-lang') || 'cs';
 
+document.addEventListener("DOMContentLoaded", () => {
+    updateLanguage(currentLang);
+    initLanguageSwitcher();
+    initBlurReveals();
+    initSpotlightEffect();
+    initNavbar();
+    initTimeline();
+    initCurvedLoop();
+    initCursor();
+    initFAQ();
+    initContactForm();
+    initScrollProgress();
+    initMagneticButtons();
+});
+
+/* ==========================================================================
+   Language Switcher
+   ========================================================================== */
 function updateLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem('ns-studio-lang', lang);
-    
+    localStorage.setItem('ns-studio-clean-lang', lang);
+
+    document.documentElement.lang = lang;
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang][key]) {
+            // Check if el has innerHTML we want to keep structure for, usually just text 
             el.innerHTML = translations[lang][key];
         }
     });
 
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (translations[lang][key]) {
-            el.placeholder = translations[lang][key];
-        }
-    });
+    // Handle Contact btn which contains an icon
+    const contactBtn = document.querySelector('[data-i18n="contact_btn"]');
+    if (contactBtn) {
+        contactBtn.innerHTML = translations[lang]['contact_btn'] + ' <i data-lucide="arrow-right"></i>';
+        if (window.lucide) lucide.createIcons();
+    }
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
-
-    document.documentElement.lang = lang;
 }
 
-// Event listeners
-document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        updateLanguage(btn.getAttribute('data-lang'));
+function initLanguageSwitcher() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateLanguage(btn.getAttribute('data-lang'));
+        });
     });
-});
+}
 
-// Scroll Reveal
-function reveal() {
-    const reveals = document.querySelectorAll(".reveal");
-    reveals.forEach(element => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add("active");
+/* ==========================================================================
+   Blur Reveal via Intersection Observer
+   ========================================================================== */
+function initBlurReveals() {
+    const revealElements = document.querySelectorAll('.blur-reveal');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    revealElements.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   Spotlight Hover Effect
+   ========================================================================== */
+function initSpotlightEffect() {
+    const cards = document.querySelectorAll(".spotlight-card");
+
+    cards.forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        });
+    });
+}
+
+/* ==========================================================================
+   Navbar Scroll Transparency
+   ========================================================================== */
+function initNavbar() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
     });
 }
 
-window.addEventListener("scroll", reveal);
+/* ==========================================================================
+   Full Custom "Antigravity" Effect Port (Vanilla JS Physics)
+   ========================================================================== */
+function initAntigravity() {
+    const containers = document.querySelectorAll('.antigravity-container');
 
-// Navbar
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-});
+    containers.forEach((container) => {
+        const elements = container.querySelectorAll('.antigravity-item');
+        if (!elements.length) return;
 
-// Form
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert(currentLang === 'cs' ? 'Zpráva odeslána!' : 'Message sent!');
-        contactForm.reset();
+        let mouseX = -1000;
+        let mouseY = -1000;
+        let isHovering = false;
+
+        // Physics State representing each element
+        const state = Array.from(elements).map(el => {
+            // mass affects spring and float phase
+            const mass = 1 + Math.random() * 1.5;
+            return {
+                el,
+                x: 0, y: 0,
+                vx: 0, vy: 0,
+                mass,
+                // store rect so we don't query DOM every frame
+                rect: { cx: 0, cy: 0 },
+                needsRectUpdate: true
+            };
+        });
+
+        const updateRects = () => {
+            state.forEach(item => {
+                const r = item.el.getBoundingClientRect();
+                item.rect.cx = r.left + r.width / 2;
+                item.rect.cy = r.top + r.height / 2;
+                item.needsRectUpdate = false;
+            });
+        };
+
+        // Spring / Physics settings — absolute minimum
+        const springStrength = 0.1;
+        const friction = 0.92;
+        const repulsionRadius = 60;
+        const repulsionStrength = 1.5;
+
+        const updatePhysics = (timestamp) => {
+            const time = timestamp * 0.001 || 0; // seconds
+
+            state.forEach((item) => {
+                // Return to origin (spring)
+                let fx = -item.x * springStrength;
+                let fy = -item.y * springStrength;
+
+                if (isHovering) {
+                    // Repel from cursor
+                    const dx = item.rect.cx - mouseX;
+                    const dy = item.rect.cy - mouseY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < repulsionRadius && distance > 0) {
+                        const force = Math.pow((repulsionRadius - distance) / repulsionRadius, 2) * repulsionStrength;
+                        fx += (dx / distance) * force / item.mass;
+                        fy += (dy / distance) * force / item.mass;
+                    }
+                }
+
+                // Apply forces
+                item.vx = (item.vx + fx) * friction;
+                item.vy = (item.vy + fy) * friction;
+
+                item.x += item.vx;
+                item.y += item.vy;
+
+                // Float: barely noticeable breathing
+                const floatY = Math.sin(time * 0.8 + item.mass * 6) * 1;
+                const floatX = Math.cos(time * 0.6 + item.mass * 6) * 0.6;
+
+                const finalX = item.x + floatX;
+                const finalY = item.y + floatY;
+
+                // Rotational tilting mapped to actual position
+                const tiltX = finalY * 0.15;
+                const tiltY = -finalX * 0.15;
+
+                // Apply transform
+                item.el.style.transform = `translate3d(${finalX}px, ${finalY}px, 0) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+            });
+
+            requestAnimationFrame(updatePhysics);
+        };
+
+        container.addEventListener('mousemove', (e) => {
+            if (state[0].needsRectUpdate) updateRects();
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            isHovering = true;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isHovering = false;
+            mouseX = -1000;
+            mouseY = -1000;
+        });
+
+        container.addEventListener('mouseenter', () => {
+            // Flag rects for update on next hover to account for scroll
+            state.forEach(item => item.needsRectUpdate = true);
+        });
+
+        // Start animation loop
+        requestAnimationFrame(updatePhysics);
+    });
+}
+function initTimeline() {
+    const processSection = document.getElementById('process');
+    const timelineFill = document.getElementById('timeline-fill');
+    const timelineSteps = document.querySelectorAll('.timeline-step');
+
+    if (!processSection || !timelineFill || !timelineSteps.length) return;
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        const sectionTop = processSection.offsetTop;
+        const sectionHeight = processSection.offsetHeight;
+
+        const startPoint = sectionTop - windowHeight + (windowHeight * 0.4);
+        const endPoint = sectionTop + sectionHeight - (windowHeight * 0.6);
+
+        if (scrollPosition > startPoint && scrollPosition < endPoint) {
+            let percentage = ((scrollPosition - startPoint) / (endPoint - startPoint)) * 100;
+            percentage = Math.max(0, Math.min(percentage, 100)); // clamp
+            timelineFill.style.height = `${percentage}%`;
+
+            timelineSteps.forEach((step, index) => {
+                const stepThreshold = (index / timelineSteps.length) * 100;
+                if (percentage > stepThreshold + 5) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        } else if (scrollPosition <= startPoint) {
+            timelineFill.style.height = '0%';
+            timelineSteps.forEach(step => step.classList.remove('active'));
+        } else if (scrollPosition >= endPoint) {
+            timelineFill.style.height = '100%';
+            timelineSteps.forEach(step => step.classList.add('active'));
+        }
     });
 }
 
-// Init
-document.addEventListener("DOMContentLoaded", () => {
-    updateLanguage(currentLang);
-    reveal();
-});
+/* ==========================================================================
+   Curved Loop — Full Width Infinite Marquee
+   ========================================================================== */
+function initCurvedLoop() {
+    const track = document.getElementById('curved-loop-track');
+    if (!track) return;
+
+    const items = [
+        'Weby od nuly',
+        'Redesigny',
+        'UI & UX Design',
+        'Clean Code',
+        'Česká Studia',
+        'Quiet Luxury',
+        'Fast Delivery',
+        'Modern Stack',
+    ];
+
+    // Duplicate 4x for seamless infinite scroll
+    const allItems = [...items, ...items, ...items, ...items];
+
+    allItems.forEach(text => {
+        const el = document.createElement('span');
+        el.className = 'curved-loop-item';
+        el.innerHTML = `${text}<span class="separator">&mdash;</span>`;
+        track.appendChild(el);
+    });
+}
+
+/* ==========================================================================
+   Custom Cursor
+   ========================================================================== */
+function initCursor() {
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    if (!dot || !ring) return;
+
+    let ringX = 0, ringY = 0;
+    let mouseX = 0, mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        // Dot snaps instantly
+        dot.style.left = mouseX + 'px';
+        dot.style.top = mouseY + 'px';
+    });
+
+    // Ring lags behind slightly for a smooth trailing effect
+    const animateRing = () => {
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        ring.style.left = ringX + 'px';
+        ring.style.top = ringY + 'px';
+        requestAnimationFrame(animateRing);
+    };
+    animateRing();
+
+    // Enlarge ring when hovering interactive elements
+    const interactiveEls = document.querySelectorAll('a, button, input, textarea, .faq-question, .spotlight-card');
+    interactiveEls.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            dot.style.width = '0px';
+            dot.style.height = '0px';
+            ring.style.width = '50px';
+            ring.style.height = '50px';
+            ring.style.borderColor = 'rgba(255,255,255,0.4)';
+        });
+        el.addEventListener('mouseleave', () => {
+            dot.style.width = '5px';
+            dot.style.height = '5px';
+            ring.style.width = '32px';
+            ring.style.height = '32px';
+            ring.style.borderColor = 'rgba(255,255,255,0.25)';
+        });
+    });
+}
+
+/* ==========================================================================
+   FAQ Accordion
+   ========================================================================== */
+function initFAQ() {
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const answer = btn.nextElementSibling;
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+            // Close all others
+            questions.forEach(other => {
+                other.setAttribute('aria-expanded', 'false');
+                other.nextElementSibling.classList.remove('open');
+            });
+
+            // Toggle clicked
+            if (!isOpen) {
+                btn.setAttribute('aria-expanded', 'true');
+                answer.classList.add('open');
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   Contact Form Handling (Formspree)
+   ========================================================================== */
+function initContactForm() {
+    const form = document.getElementById('contact-form');
+    const msgEl = document.getElementById('form-message');
+    if (!form || !msgEl) return;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerText;
+
+        // Visual feedback
+        submitBtn.disabled = true;
+        submitBtn.innerText = '...';
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                msgEl.innerText = translations[currentLang].form_success || "Success!";
+                msgEl.classList.add('success');
+                msgEl.classList.add('active'); // Show it
+                form.reset();
+            } else {
+                throw new Error();
+            }
+        } catch (err) {
+            msgEl.innerText = translations[currentLang].form_error || "Error!";
+            msgEl.classList.add('error');
+            msgEl.classList.add('active'); // Show it
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalBtnText;
+
+            // Auto hide after 6s
+            setTimeout(() => {
+                msgEl.classList.remove('active');
+                msgEl.className = 'form-message';
+            }, 6000);
+        }
+    });
+}
+
+/* ==========================================================================
+   Scroll Progress Bar
+   ========================================================================== */
+function initScrollProgress() {
+    const bar = document.getElementById('scroll-progress');
+    if (!bar) return;
+
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        bar.style.width = scrolled + "%";
+    });
+}
+
+/* ==========================================================================
+   Magnetic Buttons Effect
+   ========================================================================== */
+function initMagneticButtons() {
+    // List of classes that should exhibit magnetic behavior
+    const magneticEls = document.querySelectorAll('.btn, .logo, .nav-links a, .portfolio-item');
+
+    magneticEls.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            // Move the element slightly towards the cursor (30% pull)
+            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            el.style.transition = 'transform 0.1s ease-out';
+        });
+
+        el.addEventListener('mouseleave', () => {
+            el.style.transform = 'translate(0, 0)';
+            el.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+        });
+    });
+}
