@@ -919,6 +919,13 @@ ul {
     border: 1px solid var(--card-border);
     border-radius: 100px;
     color: var(--text-faint);
+    display: inline-flex;
+    align-items: center;
+}
+
+.team-skills-inline span i[class^="devicon-"] {
+    font-size: 1.25em;
+    margin-right: 0.35rem;
 }
 
 /* ==========================================================================

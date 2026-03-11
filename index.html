@@ -62,6 +62,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Devicon for colored skill icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <!-- Fonts: Inter for unmatched modern legibility -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -253,24 +256,20 @@
                 <!-- Student 1 -->
                 <div class="team-card blur-reveal blur-delay-1">
                     <div class="team-photo-wrapper">
-                        <div class="team-photo-placeholder">
-                            <i data-lucide="user" stroke-width="1"></i>
-                        </div>
-                        <div class="team-photo-overlay">
-                            <span data-i18n="team_photo_soon">Foto brzy</span>
-                        </div>
+                        <img src="assets/lukas.jpg" alt="Lukáš Svašek"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
                     </div>
                     <div class="team-info">
                         <h3 class="team-name">Lukáš Svašek</h3>
                         <p class="team-role">Educanet IT &nbsp;|&nbsp; <a href="mailto:lukas@svasek.net"
                                 style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">lukas@svasek.net</a>
                         </p>
-                        <p class="team-bio" data-i18n="team1_bio">Zaměřený na vizuální preciznost a čistý kód. Designuje
-                            systémy, které vypadají prémiově a fungují perfektně.</p>
+                        <p class="team-bio" data-i18n="team2_bio">Staví rychlé, optimalizované weby od základů. Řeší
+                            technickou stránku věci, aby výsledek byl vždy spolehlivý.</p>
                         <div class="team-skills-inline">
-                            <span>Figma</span>
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
+                            <span><i class="devicon-react-original colored"></i> React</span>
+                            <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                            <span><i class="devicon-figma-plain colored"></i> UX Research</span>
                         </div>
                     </div>
                 </div>
@@ -290,12 +289,12 @@
                         <p class="team-role">Weijlovka &nbsp;|&nbsp; <a href="mailto:doplním"
                                 style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">E-mail
                                 doplníme</a></p>
-                        <p class="team-bio" data-i18n="team2_bio">Staví rychlé, optimalizované weby od základů. Řeší
-                            technickou stránku věci, aby výsledek byl vždy spolehlivý.</p>
+                        <p class="team-bio" data-i18n="team1_bio">Zaměřený na vizuální preciznost a čistý kód. Designuje
+                            systémy, které vypadají prémiově a fungují perfektně.</p>
                         <div class="team-skills-inline">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>UX Research</span>
+                            <span><i class="devicon-figma-plain colored"></i> Figma</span>
+                            <span><i class="devicon-html5-plain colored"></i> HTML5/CSS3</span>
+                            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
                         </div>
                     </div>
                 </div>
@@ -312,7 +311,10 @@
 
             <div class="skills-grid">
                 <div class="skill-item blur-reveal blur-delay-1">
-                    <div class="skill-icon"><i data-lucide="code-2" stroke-width="1.5"></i></div>
+                    <div class="skill-icon">
+                        <i class="devicon-html5-plain colored" style="font-size: 1.2em;"></i>
+                        <i class="devicon-css3-plain colored" style="font-size: 1.2em;"></i>
+                    </div>
                     <div class="skill-info">
                         <h4>HTML & CSS</h4>
                         <p data-i18n="skill1_desc">Sémantický kód, čisté styly. Žádné zbytečné knihovny — jen základ, co
@@ -320,7 +322,8 @@
                     </div>
                 </div>
                 <div class="skill-item blur-reveal blur-delay-2">
-                    <div class="skill-icon"><i data-lucide="braces" stroke-width="1.5"></i></div>
+                    <div class="skill-icon"><i class="devicon-javascript-plain colored" style="font-size: 1.5em;"></i>
+                    </div>
                     <div class="skill-info">
                         <h4>JavaScript</h4>
                         <p data-i18n="skill2_desc">Animace, interakce, logika. Vanilla JS i moderní frameworky bez
@@ -328,7 +331,8 @@
                     </div>
                 </div>
                 <div class="skill-item blur-reveal blur-delay-1">
-                    <div class="skill-icon"><i data-lucide="atom" stroke-width="1.5"></i></div>
+                    <div class="skill-icon"><i class="devicon-react-original colored" style="font-size: 1.5em;"></i>
+                    </div>
                     <div class="skill-info">
                         <h4>React</h4>
                         <p data-i18n="skill3_desc">Komponenty, state management a rychlé SPA. Vite + React pro moderní
@@ -336,7 +340,8 @@
                     </div>
                 </div>
                 <div class="skill-item blur-reveal blur-delay-2">
-                    <div class="skill-icon"><i data-lucide="git-branch" stroke-width="1.5"></i></div>
+                    <div class="skill-icon"><i class="devicon-github-original"
+                            style="font-size: 1.5em; color: var(--text-main);"></i></div>
                     <div class="skill-info">
                         <h4>GitHub</h4>
                         <p data-i18n="skill4_desc">Verzování, pull requesty a CI/CD pipeline. Kód je vždy pod kontrolou
@@ -352,7 +357,7 @@
                     </div>
                 </div>
                 <div class="skill-item blur-reveal blur-delay-2">
-                    <div class="skill-icon"><i data-lucide="figma" stroke-width="1.5"></i></div>
+                    <div class="skill-icon"><i class="devicon-figma-plain colored" style="font-size: 1.5em;"></i></div>
                     <div class="skill-info">
                         <h4>Figma Design</h4>
                         <p data-i18n="skill6_desc">Wireframy, prototypy a handoff. Design systém domluvený ještě před
