@@ -712,6 +712,22 @@ ul {
     background-image: url('assets/atomiqq_user.png');
 }
 
+.mockup-bg-3 {
+    background-image: url('assets/fitness_blog\ \(1\).png');
+}
+
+.mockup-bg-4 {
+    background-image: url('assets/landing_page.png');
+}
+
+.mockup-bg-5 {
+    background-image: url('assets/portfolio.png');
+}
+
+.mockup-bg-6 {
+    background-image: url('assets/zlaty_klas.png');
+}
+
 
 .mockup-overlay {
     position: absolute;
