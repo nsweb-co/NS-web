@@ -114,6 +114,8 @@
         <div class="container hero-container">
             <div class="hero-content antigravity-container">
                 <div class="eyebrow blur-reveal" data-i18n="hero_eyebrow">Engineering Elegance</div>
+                <div class="trust-badge blur-reveal blur-delay-1" data-i18n="trust_badge">100% Custom Coded. No
+                    Templates.</div>
                 <h1 class="hero-title blur-reveal blur-delay-1">
                     <span data-i18n="hero_h1_pt1">Quiet Luxury for your</span>
                     <br>
@@ -257,13 +259,19 @@
                 <div class="team-card blur-reveal blur-delay-1">
                     <div class="team-photo-wrapper">
                         <img src="assets/lukas.jpg" alt="Lukáš Svašek"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: top; transform: scale(1.15); border-radius: inherit;">
                     </div>
                     <div class="team-info">
                         <h3 class="team-name">Lukáš Svašek</h3>
                         <p class="team-role">Educanet IT &nbsp;|&nbsp; <a href="mailto:lukas@svasek.net"
                                 style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">lukas@svasek.net</a>
                         </p>
+                        <div class="team-socials">
+                            <a href="https://github.com/lukas-svasek" target="_blank" rel="noopener"><i
+                                    class="devicon-github-original" style="font-size: 1.25em;"></i></a>
+                            <a href="https://linkedin.com/in/lukas-svasek" target="_blank" rel="noopener"><i
+                                    class="devicon-linkedin-plain colored" style="font-size: 1.25em;"></i></a>
+                        </div>
                         <p class="team-bio" data-i18n="team2_bio">Staví rychlé, optimalizované weby od základů. Řeší
                             technickou stránku věci, aby výsledek byl vždy spolehlivý.</p>
                         <div class="team-skills-inline">
@@ -289,6 +297,12 @@
                         <p class="team-role">Weijlovka &nbsp;|&nbsp; <a href="mailto:doplním"
                                 style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">E-mail
                                 doplníme</a></p>
+                        <div class="team-socials">
+                            <a href="https://github.com/jakub-nutil" target="_blank" rel="noopener"><i
+                                    class="devicon-github-original" style="font-size: 1.25em;"></i></a>
+                            <a href="https://linkedin.com/in/jakub-nutil" target="_blank" rel="noopener"><i
+                                    class="devicon-linkedin-plain colored" style="font-size: 1.25em;"></i></a>
+                        </div>
                         <p class="team-bio" data-i18n="team1_bio">Zaměřený na vizuální preciznost a čistý kód. Designuje
                             systémy, které vypadají prémiově a fungují perfektně.</p>
                         <div class="team-skills-inline">
@@ -449,6 +463,40 @@
                     </div>
                 </div>
 
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq5_q">Kolik stojí doručení takového webu?</span>
+                        <i data-lucide="plus" stroke-width="1.5"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq5_a">Cena se odvíjí od rozsahu a funkcí. Základní weby s kódem na míru začínají
+                            okolo 15 000 Kč. Přesný odhad připravíme po úvodním hovoru.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item blur-reveal blur-delay-2">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq6_q">Můžu si web po spuštění sám měnit?</span>
+                        <i data-lucide="plus" stroke-width="1.5"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq6_a">Záleží na vybraném řešení. Preferujeme výkonné weby, o které se staráme
+                            plně my, ale umíme nasadit i spolehlivé CMS (např. Sanity), pokud je správa obsahu pro vás
+                            prioritní.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span data-i18n="faq7_q">Jak je to s údržbou?</span>
+                        <i data-lucide="plus" stroke-width="1.5"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq7_a">Zajišťujeme občasné bezpečnostní i funkční aktualizace v rámci měsíční
+                            údržby tak, abyste web opravdu nemuseli řešit, a mohli se věnovat byznysu.</p>
+                    </div>
+                </div>
+
                 <div class="faq-item blur-reveal blur-delay-2">
                     <button class="faq-question" aria-expanded="false">
                         <span data-i18n="faq4_q">Co potřebuji mít připravené?</span>
@@ -511,9 +559,17 @@
             <div class="footer-content">
                 <div class="logo">&lt;ns<span>/</span>web&gt;</div>
                 <div class="footer-links">
-                    <a href="#">X (Twitter)</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
+                    <div class="footer-nav">
+                        <a href="#services">Služby</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#team">Tým</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="#">X (Twitter)</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottomLine">
@@ -521,6 +577,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_text">Používáme cookies pouze pro nezbytný chod webu. Žádné nevyžádané sledování.</p>
+            <button class="btn btn-outline" id="acceptCookies" data-i18n="cookie_btn"
+                style="padding: 0.5rem 1rem; font-size: 0.8rem;">Rozumím</button>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
