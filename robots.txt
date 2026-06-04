@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ns-web.com/sitemap.xml

@@ -40,7 +40,7 @@ const translations = {
         step4_desc: "Finální testování a spuštění. Váš \"quiet luxury\" web ožívá.",
         contact_title: "Začněme tvořit.",
         contact_subtitle: "Hledáte design, který nekřičí, ale rezonuje?",
-        contact_btn: "hello@nsstudio.tech",
+        contact_btn: "hello@ns-web.com",
         team_title: "Kdo Za Tím Stojí",
         team_sub: "Dva studenti s jedním cílem",
         team_photo_soon: "Foto brzy",
@@ -115,7 +115,7 @@ const translations = {
         step4_desc: "Final testing and deployment. Your \"quiet luxury\" website comes to life.",
         contact_title: "Let's start building.",
         contact_subtitle: "Looking for a design that resonates without shouting?",
-        contact_btn: "hello@nsstudio.tech",
+        contact_btn: "hello@ns-web.com",
         team_title: "Who's Behind It",
         team_sub: "Two students, one goal",
         team_photo_soon: "Photo soon",
@@ -173,7 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactForm();
     initScrollProgress();
     initMagneticButtons();
-    initParticles();
 });
 
 /* ==========================================================================
@@ -484,47 +483,62 @@ function initCurvedLoop() {
    ========================================================================== */
 function initCursor() {
     const dot = document.getElementById('cursor-dot');
-    const ring = document.getElementById('cursor-ring');
-    if (!dot || !ring) return;
+    if (!dot) return;
 
-    let ringX = 0, ringY = 0;
+    // Disable ONLY on touch-only devices (no mouse/trackpad).
+    // Note: 'ontouchstart'/maxTouchPoints give false positives on laptops
+    // (esp. Chromium/Brave on macOS), so use a pointer media query instead.
+    const isTouchOnly = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    if (isTouchOnly) {
+        dot.style.display = 'none';
+        document.body.style.cursor = 'auto';
+        return;
+    }
+
     let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    const root = document.documentElement;
 
     document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        // Dot snaps instantly
-        dot.style.left = mouseX + 'px';
-        dot.style.top = mouseY + 'px';
+        document.body.classList.add('cursor-active');
     });
 
-    // Ring lags behind slightly for a smooth trailing effect
-    const animateRing = () => {
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
-        ring.style.left = ringX + 'px';
-        ring.style.top = ringY + 'px';
-        requestAnimationFrame(animateRing);
+    // Smooth trailing for the dot
+    const animateDot = () => {
+        dotX += (mouseX - dotX) * 0.2;
+        dotY += (mouseY - dotY) * 0.2;
+        dot.style.left = dotX + 'px';
+        dot.style.top = dotY + 'px';
+        root.style.setProperty('--mx', dotX + 'px');
+        root.style.setProperty('--my', dotY + 'px');
+        requestAnimationFrame(animateDot);
     };
-    animateRing();
+    animateDot();
 
-    // Enlarge ring when hovering interactive elements
-    const interactiveEls = document.querySelectorAll('a, button, input, textarea, .faq-question, .spotlight-card');
-    interactiveEls.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            dot.style.width = '0px';
-            dot.style.height = '0px';
-            ring.style.width = '50px';
-            ring.style.height = '50px';
-            ring.style.borderColor = 'rgba(255,255,255,0.4)';
-        });
-        el.addEventListener('mouseleave', () => {
-            dot.style.width = '5px';
-            dot.style.height = '5px';
-            ring.style.width = '32px';
-            ring.style.height = '32px';
-            ring.style.borderColor = 'rgba(255,255,255,0.25)';
-        });
+    // --- Hover states ---
+    const setCursorHover = () => {
+        dot.classList.add('hovering');
+    };
+
+    const clearCursorHover = () => {
+        dot.classList.remove('hovering');
+    };
+
+    document.querySelectorAll('a, button, input, textarea, .faq-question, .portfolio-item, .contact-box, .spotlight-card').forEach(el => {
+        el.addEventListener('mouseenter', setCursorHover);
+        el.addEventListener('mouseleave', clearCursorHover);
+    });
+
+    // Hide cursor when leaving window
+    document.addEventListener('mouseleave', () => {
+        dot.style.opacity = '0';
+        document.body.classList.remove('cursor-active');
+    });
+    document.addEventListener('mouseenter', () => {
+        dot.style.opacity = '1';
+        document.body.classList.add('cursor-active');
     });
 }
 
@@ -690,18 +704,32 @@ function initParticles() {
     const COUNT = 90;
     const CONNECT_DIST = 120;
     const REPEL_RADIUS = 140;
-    const REPEL_STRENGTH = 0.7;
-    const FRICTION = 0.96;
-    const BASE_SPEED = 0.3;
+    const REPEL_STRENGTH = 0.35;
+    const FRICTION = 0.88;
+    const SPRING = 0.012;
 
-    const particles = Array.from({ length: COUNT }, () => ({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * BASE_SPEED,
-        vy: (Math.random() - 0.5) * BASE_SPEED,
-        size: Math.random() * 2 + 1.2,
-        opacity: Math.random() * 0.7 + 0.15,
-    }));
+    const particles = Array.from({ length: COUNT }, () => {
+        const hx = Math.random() * window.innerWidth;
+        const hy = Math.random() * window.innerHeight;
+        return {
+            x: hx,
+            y: hy,
+            homeX: hx,
+            homeY: hy,
+            vx: 0,
+            vy: 0,
+            size: Math.random() * 2 + 1.2,
+            opacity: Math.random() * 0.7 + 0.15,
+        };
+    });
+
+    // Re-anchor home positions on resize so dots stay distributed
+    window.addEventListener('resize', () => {
+        for (const p of particles) {
+            p.homeX = (p.homeX / (width || window.innerWidth)) * window.innerWidth;
+            p.homeY = (p.homeY / (height || window.innerHeight)) * window.innerHeight;
+        }
+    });
 
     const animate = () => {
         ctx.clearRect(0, 0, width, height);
@@ -717,16 +745,14 @@ function initParticles() {
                 p.vy += (dy / dist) * force;
             }
 
+            // Spring back to home position
+            p.vx += (p.homeX - p.x) * SPRING;
+            p.vy += (p.homeY - p.y) * SPRING;
+
             p.vx *= FRICTION;
             p.vy *= FRICTION;
             p.x += p.vx;
             p.y += p.vy;
-
-            // Wrap edges
-            if (p.x < 0) p.x = width;
-            else if (p.x > width) p.x = 0;
-            if (p.y < 0) p.y = height;
-            else if (p.y > height) p.y = 0;
 
             // Draw dot
             ctx.beginPath();

@@ -56,12 +56,13 @@ body.clean-theme {
 }
 
 /* ==========================================================================
-   Custom Cursor
+   Custom Cursor — Minimal Dot
    ========================================================================== */
 .cursor-dot {
-    width: 5px;
-    height: 5px;
-    background: var(--text-primary);
+    width: 9px;
+    height: 9px;
+    background: #fff;
+    border: 0 solid rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     position: fixed;
     top: 0;
@@ -69,29 +70,18 @@ body.clean-theme {
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, opacity 0.3s;
+    mix-blend-mode: difference;
+    box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.6);
+    transition: width 0.25s var(--ease-smooth), height 0.25s var(--ease-smooth), background 0.25s var(--ease-smooth), border-width 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth);
 }
 
-.cursor-ring {
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: transform 0.08s ease-out, width 0.3s, height 0.3s, border-color 0.3s;
-}
-
-/* Expand ring on hover of links/buttons */
-a:hover~.cursor-ring,
-button:hover~.cursor-ring {
-    width: 48px;
-    height: 48px;
-    border-color: rgba(255, 255, 255, 0.5);
+/* Hover over interactive elements (buttons, links, cards…) — opens into a ring */
+.cursor-dot.hovering {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.06);
+    border-width: 1.5px;
+    box-shadow: 0 0 26px 4px rgba(255, 255, 255, 0.16);
 }
 
 /* Restore cursor for inputs */
@@ -104,6 +94,14 @@ select {
 a,
 button {
     cursor: none;
+}
+
+/* Bulletproof: hide the native cursor on everything (the custom dot takes
+   over). The universal !important defeats UA/element quirks that otherwise
+   re-show the system arrow on some buttons in Brave/Chromium. Text fields
+   keep their caret. */
+.clean-theme *:not(input):not(textarea):not(select) {
+    cursor: none !important;
 }
 
 /* ==========================================================================
@@ -189,11 +187,43 @@ ul {
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background-image: radial-gradient(var(--card-border) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
     background-size: 40px 40px;
-    opacity: 0.5;
-    mask-image: radial-gradient(ellipse at top, black 40%, transparent 80%);
-    -webkit-mask-image: radial-gradient(ellipse at top, black 40%, transparent 80%);
+    opacity: 0.7;
+    mask-image: radial-gradient(ellipse at top, black 55%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse at top, black 55%, transparent 95%);
+}
+
+/* ==========================================================================
+   Cursor-reactive grid — lights up the dots around the cursor
+   ========================================================================== */
+.grid-reveal {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(circle 200px at var(--mx, -500px) var(--my, -500px), #000 0%, rgba(0, 0, 0, 0.4) 50%, transparent 80%);
+    mask-image: radial-gradient(circle 200px at var(--mx, -500px) var(--my, -500px), #000 0%, rgba(0, 0, 0, 0.4) 50%, transparent 80%);
+}
+
+/* Soft light that follows the cursor */
+.cursor-glow {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-smooth);
+    background: radial-gradient(circle 280px at var(--mx, -500px) var(--my, -500px), rgba(255, 255, 255, 0.07), transparent 65%);
+}
+
+.cursor-active .grid-reveal,
+.cursor-active .cursor-glow {
+    opacity: 1;
 }
 
 /* ==========================================================================
@@ -257,7 +287,7 @@ ul {
 
 .mobile-menu-btn {
     display: none;
-    cursor: pointer;
+    cursor: none;
     color: var(--text-muted);
     background: none;
     border: none;
@@ -322,7 +352,7 @@ ul {
 .lang-btn {
     background: none;
     border: none;
-    cursor: pointer;
+    cursor: none;
     color: var(--text-faint);
     transition: color 0.3s;
     font-family: inherit;
@@ -350,7 +380,7 @@ ul {
     font-size: 0.9rem;
     font-weight: 500;
     border-radius: 8px;
-    cursor: pointer;
+    cursor: none;
     transition: all 0.3s var(--ease-smooth);
 }
 
