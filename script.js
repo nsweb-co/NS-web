@@ -69,7 +69,6 @@ const translations = {
         faq6_a: "Záleží na vybraném řešení. Preferujeme výkonné weby, o které se staráme plně my, ale umíme nasadit i spolehlivé CMS (např. Sanity), pokud je správa obsahu pro vás prioritní.",
         faq7_q: "Jak je to s údržbou?",
         faq7_a: "Zajišťujeme občasné bezpečnostní i funkční aktualizace v rámci měsíční údržby tak, abyste web opravdu nemuseli řešit, a mohli se věnovat byznysu.",
-        trust_badge: "100% Custom Coded. No Templates.",
         cookie_text: "Používáme cookies pouze pro nezbytný chod webu. Žádné nevyžádané sledování.",
         cookie_btn: "Rozumím",
         form_name: "Jméno",
@@ -144,7 +143,6 @@ const translations = {
         faq6_a: "It depends on the solution. We prefer performant bespoke sites maintained fully by us, but we can deploy a reliable CMS (e.g. Sanity) if content management is a priority.",
         faq7_q: "What about maintenance?",
         faq7_a: "We handle occasional security and functional updates within our monthly maintenance plan, so you don't have to worry about the website and can focus on your business.",
-        trust_badge: "100% Custom Coded. No Templates.",
         cookie_text: "We use cookies only for essential site functions. No tracking.",
         cookie_btn: "Got it",
         form_name: "Name",
@@ -166,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initNavbar();
     initMobileMenu();
     initTimeline();
-    initCurvedLoop();
     initCursor();
     initFAQ();
     initCookieBanner();
@@ -446,35 +443,6 @@ function initTimeline() {
             timelineFill.style.height = '100%';
             timelineSteps.forEach(step => step.classList.add('active'));
         }
-    });
-}
-
-/* ==========================================================================
-   Curved Loop — Full Width Infinite Marquee
-   ========================================================================== */
-function initCurvedLoop() {
-    const track = document.getElementById('curved-loop-track');
-    if (!track) return;
-
-    const items = [
-        'Weby od nuly',
-        'Redesigny',
-        'UI & UX Design',
-        'Clean Code',
-        'Česká Studia',
-        'Quiet Luxury',
-        'Fast Delivery',
-        'Modern Stack',
-    ];
-
-    // Duplicate 4x for seamless infinite scroll
-    const allItems = [...items, ...items, ...items, ...items];
-
-    allItems.forEach(text => {
-        const el = document.createElement('span');
-        el.className = 'curved-loop-item';
-        el.innerHTML = `${text}<span class="separator">&mdash;</span>`;
-        track.appendChild(el);
     });
 }
 

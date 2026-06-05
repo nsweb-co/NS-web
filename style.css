@@ -516,20 +516,6 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-.trust-badge {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-main);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--card-border);
-    padding: 0.4rem 1.2rem;
-    border-radius: 100px;
-    margin-bottom: 2rem;
-}
-
 .hero-title {
     font-size: clamp(3rem, 6vw, 5.5rem);
     font-weight: 500;
@@ -547,18 +533,30 @@ ul {
 }
 
 /* ==========================================================================
-   Curved Loop — Full Width SVG Marquee
+   Scroll-down Cue
    ========================================================================== */
-.curved-loop-band {
-    width: 100%;
-    overflow: hidden;
-    padding: 2.5rem 0;
-    position: relative;
-    border-top: 1px solid var(--card-border);
-    border-bottom: 1px solid var(--card-border);
-    margin: 2rem 0 0;
+.scroll-cue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    margin: 2.5rem auto 0;
+    color: var(--text-muted);
+    border-radius: 50%;
     opacity: 0;
     animation: fadeIn 1s 1.5s ease forwards;
+    transition: color 0.3s ease;
+}
+
+.scroll-cue:hover {
+    color: var(--text-main);
+}
+
+.scroll-cue svg {
+    width: 58px;
+    height: 58px;
+    animation: scrollBounce 2s ease-in-out infinite;
 }
 
 @keyframes fadeIn {
@@ -567,46 +565,20 @@ ul {
     }
 }
 
-.curved-loop-track {
-    display: flex;
-    white-space: nowrap;
-    animation: marqueeScroll 30s linear infinite;
-}
-
-.curved-loop-track:hover {
-    animation-play-state: paused;
-}
-
-.curved-loop-item {
-    font-size: clamp(0.85rem, 1vw, 1rem);
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    padding: 0 2.5rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 2.5rem;
-    flex-shrink: 0;
-    transition: color 0.3s ease;
-}
-
-.curved-loop-track:hover .curved-loop-item {
-    color: var(--text-muted);
-}
-
-.curved-loop-item .separator {
-    color: var(--card-border);
-    font-size: 1.2em;
-}
-
-@keyframes marqueeScroll {
-    from {
-        transform: translateX(0);
+@keyframes scrollBounce {
+    0%,
+    100% {
+        transform: translateY(0);
     }
 
-    to {
-        transform: translateX(-50%);
+    50% {
+        transform: translateY(9px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-cue svg {
+        animation: none;
     }
 }
 
@@ -1363,37 +1335,11 @@ ul {
 /* ==========================================================================
    Antigravity Float System (Tribute to @react-bits/Antigravity)
    ========================================================================== */
+/* Float animation disabled — hero/text stays still (cursor repulsion in JS still applies to .antigravity-item) */
 .antigravity-container,
 .antigravity-delay-1,
 .antigravity-delay-2 {
-    animation: float 8s ease-in-out infinite;
     will-change: transform;
-}
-
-.antigravity-delay-1 {
-    animation-delay: 1.5s;
-}
-
-.antigravity-delay-2 {
-    animation-delay: 3s;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    33% {
-        transform: translateY(-8px) rotate(0.5deg);
-    }
-
-    66% {
-        transform: translateY(3px) rotate(-0.5deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
 }
 
 /* ==========================================================================
