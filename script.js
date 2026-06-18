@@ -335,8 +335,8 @@ function initAntigravity() {
         // Spring / Physics settings — absolute minimum
         const springStrength = 0.1;
         const friction = 0.92;
-        const repulsionRadius = 60;
-        const repulsionStrength = 1.5;
+        const repulsionRadius = 50;
+        const repulsionStrength = 0.4;
 
         const updatePhysics = (timestamp) => {
             const time = timestamp * 0.001 || 0; // seconds
@@ -367,15 +367,15 @@ function initAntigravity() {
                 item.y += item.vy;
 
                 // Float: barely noticeable breathing
-                const floatY = Math.sin(time * 0.8 + item.mass * 6) * 1;
-                const floatX = Math.cos(time * 0.6 + item.mass * 6) * 0.6;
+                const floatY = Math.sin(time * 0.8 + item.mass * 6) * 0.5;
+                const floatX = Math.cos(time * 0.6 + item.mass * 6) * 0.3;
 
                 const finalX = item.x + floatX;
                 const finalY = item.y + floatY;
 
                 // Rotational tilting mapped to actual position
-                const tiltX = finalY * 0.15;
-                const tiltY = -finalX * 0.15;
+                const tiltX = finalY * 0.04;
+                const tiltY = -finalX * 0.04;
 
                 // Apply transform
                 item.el.style.transform = `translate3d(${finalX}px, ${finalY}px, 0) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
