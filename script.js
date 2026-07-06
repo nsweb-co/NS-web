@@ -12,56 +12,73 @@ const translations = {
         nav_portfolio: "Práce",
         nav_process: "Proces",
         nav_contact: "Kontakt",
-        hero_eyebrow: "Rychlé a moderní weby",
+        nav_team: "Tým",
+        nav_faq: "FAQ",
+        hero_eyebrow: "Design & Development",
         hero_h1_pt1: "Rychlé a moderní weby",
         hero_h1_pt2: "bez kompromisů.",
+        hero_rotate_words: ["bez kompromisů.", "s čistým kódem.", "šité na míru.", "co prodávají.", "s důrazem na detail."],
         hero_desc: "Jsme malé webové studio zaměřené na tvorbu moderních, minimalistických webů. Navrhujeme a vyvíjíme digitální prezentace s důrazem na výkon, typografii a čistý kód.",
         hero_btn: "Prozkoumat služby",
-        services_title: "Co Přesně Děláme",
+        hero_btn_write: "Napsat",
+        hero_btn_call: "Zavolat",
+        services_label: "Služby",
+        services_title_a: "Co přesně",
+        services_title_em: "děláme",
         card1_title: "Weby Od Nuly",
-        card1_sub: "Pro ty, co začínají",
+        card1_sub: "Pro nové projekty",
         card1_desc: "Navrhujeme a vyvíjíme moderní weby od základu. Čistý design, rychlý výkon a řešení na míru vašemu projektu.",
         card2_title: "Redesigny",
-        card2_sub: "Pro ty, co už web mají",
+        card2_sub: "Pro weby, které už běží",
         card2_desc: "Modernizujeme zastaralé weby a zjednodušujeme jejich strukturu. Výsledkem je přehlednější design a lepší uživatelský zážitek.",
         card3_title: "Optimalizace & Správa",
-        card3_sub: "Pro ty, co chtějí výkon",
+        card3_sub: "Pro maximální výkon",
         card3_desc: "Zlepšíme rychlost, SEO a technickou kvalitu vašeho webu. Postaráme se o stabilní provoz a dlouhodobou správu.",
-        portfolio_title: "Naše Práce",
-        portfolio_sub: "Ověřené koncepty fungující v praxi",
-        process_title: "Jak To Probíhá",
-        step1_title: "01 / Discovery Call",
+        portfolio_label: "Naše práce",
+        portfolio_title_a: "Naše",
+        portfolio_title_em: "práce",
+        portfolio_sub: "Vybrané projekty, které fungují v praxi",
+        portfolio_cat_1: "Gastro · One-page",
+        portfolio_cat_2: "Marketing · Kampaně",
+        portfolio_cat_3: "Blog · Fitness",
+        portfolio_cat_4: "SaaS · Landing page",
+        portfolio_cat_5: "Portfolio · Osobní web",
+        portfolio_cat_6: "Gastro · Prezentace",
+        portfolio_view_btn: "Zobrazit web",
+        process_label: "Proces",
+        process_title_a: "Jak to",
+        process_title_em: "probíhá",
+        step1_title: "Discovery Call",
         step1_desc: "Probereme vaši vizi a najdeme společnou řeč. Jednoduché a k věci.",
-        step2_title: "02 / Design & Wireframing",
+        step2_title: "Design & Wireframing",
         step2_desc: "Vytvoříme precizní návrh zaměřený na obsah a čistotu rozhraní.",
-        step3_title: "03 / Development",
+        step3_title: "Development",
         step3_desc: "Píšeme čistý kód. Důraz na ohromující výkon a plynulé interakce.",
-        step4_title: "04 / Launch",
-        step4_desc: "Finální testování a spuštění. Váš \"quiet luxury\" web ožívá.",
-        contact_title: "Začněme tvořit.",
+        step4_title: "Launch",
+        step4_desc: "Finální testování, nasazení na doménu a předání. Váš web jde do světa.",
+        contact_title: "Začněme tvořit",
         contact_subtitle: "Hledáte design, který nekřičí, ale rezonuje?",
-        contact_btn: "hello@ns-web.com",
-        team_title: "Kdo Za Tím Stojí",
+        team_label: "Tým",
+        team_title: "Kdo za tím stojí",
         team_sub: "Dva studenti s jedním cílem",
-        team_photo_soon: "Foto brzy",
-        team1_role: "Design & Frontend",
         team1_bio: "Zaměřený na vizuální preciznost a čistý kód. Designuje systémy, které vypadají prémiově a fungují perfektně.",
-        team2_role: "Development & Strategy",
         team2_bio: "Staví rychlé, optimalizované weby od základů. Řeší technickou stránku věci, aby výsledek byl vždy spolehlivý.",
-        skills_title: "Co Umíme",
+        skills_label: "Dovednosti",
+        skills_title: "Co umíme",
         skill1_desc: "Sémantický kód, čisté styly. Žádné zbytečné knihovny — jen základ, co létá.",
         skill2_desc: "Animace, interakce, logika. Vanilla JS i moderní frameworky bez zbytečné složitosti.",
         skill3_desc: "Komponenty, state management a rychlé SPA. Vite + React pro moderní projekty.",
         skill4_desc: "Verzování, pull requesty a CI/CD pipeline. Kód je vždy pod kontrolou a dohledatelný.",
         skill5_desc: "DNS, SSL certifikát a nasazení na vlastní doménu. Váš web je online do 24 hodin.",
         skill6_desc: "Wireframy, prototypy a handoff. Design systém domluvený ještě před napsáním prvního řádku kódu.",
-        faq_title: "Časté Otázky",
+        faq_label: "FAQ",
+        faq_title: "Časté otázky",
         faq1_q: "Kolik stojí nový web?",
-        faq1_a: "Cenu vždy nastavujeme individuálně podle rozsahu projektu. Základní landing page začíná od 5 000 Kč, komplexnější prezentační weby od 10 000 Kč. Ozvi se a domluvíme se.",
+        faq1_a: "Cenu vždy nastavujeme individuálně podle rozsahu projektu. Základní landing page začíná od 5 000 Kč, komplexnější prezentační weby od 10 000 Kč. Ozvěte se a domluvíme se.",
         faq2_q: "Jak dlouho trvá výroba webu?",
-        faq2_a: "Jednoduchý web zpravidla do 2–3 týdnů od prvního callu. U větších projektů počítej se 4–6 týdny. Záleží na rozsahu a rychlosti tvé zpětné vazby.",
+        faq2_a: "Jednoduchý web zpravidla do 2–3 týdnů od prvního callu. U větších projektů počítejte se 4–6 týdny. Záleží na rozsahu a rychlosti vaší zpětné vazby.",
         faq3_q: "Děláte e-shopy?",
-        faq3_a: "E-shopy řešíme po domluvě. Kontaktuj nás a popište rozsah projektu — rádi se domluvíme.",
+        faq3_a: "E-shopy řešíme po domluvě. Kontaktujte nás a popište rozsah projektu — rádi se domluvíme.",
         faq4_q: "Co potřebuji mít připravené?",
         faq4_a: "Stačí mít představu o tom, co chcete sdělit, a ideálně logo nebo brand guide. Vše ostatní vyřešíme společně.",
 
@@ -69,14 +86,13 @@ const translations = {
         faq6_a: "Záleží na vybraném řešení. Preferujeme výkonné weby, o které se staráme plně my, ale umíme nasadit i spolehlivé CMS (např. Sanity), pokud je správa obsahu pro vás prioritní.",
         faq7_q: "Jak je to s údržbou?",
         faq7_a: "Zajišťujeme občasné bezpečnostní i funkční aktualizace v rámci měsíční údržby tak, abyste web opravdu nemuseli řešit, a mohli se věnovat byznysu.",
-        cookie_text: "Používáme cookies pouze pro nezbytný chod webu. Žádné nevyžádané sledování.",
-        cookie_btn: "Rozumím",
         form_name: "Jméno",
         form_email: "E-mail",
         form_msg: "Zpráva",
         form_send: "Odeslat zprávu",
         form_success: "Zpráva byla úspěšně odeslána! Ozveme se vám brzy.",
-        form_error: "Omlouváme se, při odesílání došlo k chybě. Zkuste to prosím znovu."
+        form_error: "Omlouváme se, při odesílání došlo k chybě. Zkuste to prosím znovu.",
+        footer_tagline: "Vyrobeno vlastníma rukama — žádná šablona."
     },
     en: {
         stat_projects: "Projects",
@@ -86,42 +102,58 @@ const translations = {
         nav_portfolio: "Work",
         nav_process: "Process",
         nav_contact: "Contact",
+        nav_team: "Team",
+        nav_faq: "FAQ",
         hero_eyebrow: "Engineering Elegance",
         hero_h1_pt1: "Quiet Luxury for your",
         hero_h1_pt2: "Digital Presence.",
+        hero_rotate_words: ["Digital Presence.", "Clean Code.", "Bold Ideas.", "Real Results.", "Fine Details."],
         hero_desc: "Two students. Endless ideas. We build sharp, minimalist websites that let your content breathe. No unnecessary noise—just clean code, perfect typography, and design that speaks for itself.",
         hero_btn: "Explore Services",
-        services_title: "What We Do",
+        hero_btn_write: "Write us",
+        hero_btn_call: "Call us",
+        services_label: "Services",
+        services_title_a: "What We",
+        services_title_em: "Do",
         card1_title: "Websites from Scratch",
-        card1_sub: "For those starting out",
+        card1_sub: "For new projects",
         card1_desc: "We design and build clean, fast, and modern websites from the ground up. Maximum use of negative space and sharp typography.",
         card2_title: "Redesigns",
-        card2_sub: "For those who already have a site",
+        card2_sub: "For sites already live",
         card2_desc: "We strip your presentation of unnecessary layers. Transforming an outdated look into a premium, technologically polished experience.",
         card3_title: "Optimization & Care",
-        card3_sub: "For those who want performance",
+        card3_sub: "For maximum performance",
         card3_desc: "We speed up your current site, improve SEO, and ensure smooth operation. Reliable background maintenance.",
-        portfolio_title: "Our Work",
+        portfolio_label: "Portfolio",
+        portfolio_title_a: "Our",
+        portfolio_title_em: "Work",
         portfolio_sub: "Proven concepts working in practice",
-        process_title: "How It Works",
-        step1_title: "01 / Discovery Call",
+        portfolio_cat_1: "Restaurant · One-page",
+        portfolio_cat_2: "Marketing · Campaigns",
+        portfolio_cat_3: "Blog · Fitness",
+        portfolio_cat_4: "SaaS · Landing page",
+        portfolio_cat_5: "Portfolio · Personal site",
+        portfolio_cat_6: "Restaurant · Presentation site",
+        portfolio_view_btn: "View website",
+        process_label: "Process",
+        process_title_a: "How It",
+        process_title_em: "Works",
+        step1_title: "Discovery Call",
         step1_desc: "We discuss your vision and find common ground. Simple and straight to the point.",
-        step2_title: "02 / Design & Wireframing",
+        step2_title: "Design & Wireframing",
         step2_desc: "We create a precise design focused on content and interface clarity.",
-        step3_title: "03 / Development",
+        step3_title: "Development",
         step3_desc: "We write clean code. Emphasis on stunning performance and smooth interactions.",
-        step4_title: "04 / Launch",
-        step4_desc: "Final testing and deployment. Your \"quiet luxury\" website comes to life.",
-        contact_title: "Let's start building.",
+        step4_title: "Launch",
+        step4_desc: "Final testing, domain deployment, and handover. Your website goes live.",
+        contact_title: "Let's start building",
         contact_subtitle: "Looking for a design that resonates without shouting?",
-        contact_btn: "hello@ns-web.com",
+        team_label: "Team",
         team_title: "Who's Behind It",
         team_sub: "Two students, one goal",
-        team_photo_soon: "Photo soon",
-        team1_role: "Design & Frontend",
         team1_bio: "Focused on visual precision and clean code. Designs systems that look premium and work flawlessly.",
-        team2_role: "Development & Strategy",
         team2_bio: "Builds fast, optimized sites from the ground up. Handles the technical side so the result is always reliable.",
+        skills_label: "Skills",
         skills_title: "What We Know",
         skill1_desc: "Semantic code, clean styles. No unnecessary libraries — just the foundation that flies.",
         skill2_desc: "Animations, interactions, logic. Vanilla JS and modern frameworks without unnecessary complexity.",
@@ -129,6 +161,7 @@ const translations = {
         skill4_desc: "Versioning, pull requests and CI/CD pipeline. Code is always under control and traceable.",
         skill5_desc: "DNS, SSL certificate and deployment to a custom domain. Your site is online within 24 hours.",
         skill6_desc: "Wireframes, prototypes and handoff. Design system agreed before the first line of code is written.",
+        faq_label: "FAQ",
         faq_title: "FAQ",
         faq1_q: "How much does a website cost?",
         faq1_a: "We price each project individually based on scope. A basic landing page starts from 5,000 CZK, more complex presentation sites from 10,000 CZK. Get in touch and we'll work it out.",
@@ -143,18 +176,37 @@ const translations = {
         faq6_a: "It depends on the solution. We prefer performant bespoke sites maintained fully by us, but we can deploy a reliable CMS (e.g. Sanity) if content management is a priority.",
         faq7_q: "What about maintenance?",
         faq7_a: "We handle occasional security and functional updates within our monthly maintenance plan, so you don't have to worry about the website and can focus on your business.",
-        cookie_text: "We use cookies only for essential site functions. No tracking.",
-        cookie_btn: "Got it",
         form_name: "Name",
         form_email: "Email",
         form_msg: "Message",
         form_send: "Send message",
         form_success: "Message sent successfully! We\'ll get back to you soon.",
-        form_error: "Sorry, there was an error sending your message. Please try again."
+        form_error: "Sorry, there was an error sending your message. Please try again.",
+        footer_tagline: "Handmade — no template."
     }
 };
 
 let currentLang = localStorage.getItem('ns-studio-clean-lang') || 'cs';
+
+/* ==========================================================================
+   Page entrance (A8) — standalone, runs independently of DOMContentLoaded
+   so a later init error can never leave the page stuck invisible. Three
+   redundant triggers (fonts.ready, timeout, window load) all reveal it.
+   ========================================================================== */
+(function initPageEntrance() {
+    let shown = false;
+    const reveal = () => {
+        if (shown) return;
+        shown = true;
+        document.body.classList.add('page-loaded');
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(reveal);
+    }
+    setTimeout(reveal, 800);
+    window.addEventListener('load', reveal);
+})();
 
 document.addEventListener("DOMContentLoaded", () => {
     updateLanguage(currentLang);
@@ -166,10 +218,15 @@ document.addEventListener("DOMContentLoaded", () => {
     initTimeline();
     initCursor();
     initFAQ();
-    initCookieBanner();
     initContactForm();
     initScrollProgress();
     initMagneticButtons();
+    initRotatingWords();
+    initHeroReveal();
+    initPortfolioParallax();
+    initStatsCounter();
+    initScrollSpy();
+    initBackgroundParallax();
 });
 
 /* ==========================================================================
@@ -189,16 +246,44 @@ function updateLanguage(lang) {
         }
     });
 
-    // Handle Contact btn which contains an icon
-    const contactBtn = document.querySelector('[data-i18n="contact_btn"]');
-    if (contactBtn) {
-        contactBtn.innerHTML = translations[lang]['contact_btn'] + ' <i data-lucide="arrow-right"></i>';
-        if (window.lucide) lucide.createIcons();
-    }
-
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+
+    // Keep the rotating hero word in the active language
+    renderRotateWord();
+}
+
+/* ==========================================================================
+   Hero rotating words (slides through a list of phrases)
+   ========================================================================== */
+const rotateState = { el: null, i: 0 };
+
+function renderRotateWord() {
+    if (!rotateState.el) return;
+    const words = translations[currentLang].hero_rotate_words || [];
+    if (!words.length) return;
+    rotateState.el.textContent = words[rotateState.i % words.length];
+}
+
+function initRotatingWords() {
+    rotateState.el = document.querySelector('[data-rotate]');
+    if (!rotateState.el) return;
+    renderRotateWord();
+
+    // Respect users who prefer no motion — show a static phrase only
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    setInterval(() => {
+        rotateState.el.classList.add('swap-out');
+        setTimeout(() => {
+            rotateState.i++;
+            renderRotateWord();
+            rotateState.el.classList.remove('swap-out');
+            rotateState.el.classList.add('swap-in');
+            setTimeout(() => rotateState.el.classList.remove('swap-in'), 550);
+        }, 500);
+    }, 3500);
 }
 
 function initLanguageSwitcher() {
@@ -214,7 +299,7 @@ function initLanguageSwitcher() {
    Blur Reveal via Intersection Observer
    ========================================================================== */
 function initBlurReveals() {
-    const revealElements = document.querySelectorAll('.blur-reveal');
+    const revealElements = document.querySelectorAll('.blur-reveal, .section-hairline');
 
     const observerOptions = {
         root: null,
@@ -232,6 +317,176 @@ function initBlurReveals() {
     }, observerOptions);
 
     revealElements.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   Portfolio parallax (A5) — nudges each mockup image ±12px against scroll
+   position. Subtle on purpose; skipped entirely for reduced motion.
+   ========================================================================== */
+function initPortfolioParallax() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const wraps = document.querySelectorAll('.portfolio-img-wrap');
+    if (!wraps.length) return;
+
+    let ticking = false;
+
+    const update = () => {
+        const viewportH = window.innerHeight;
+        wraps.forEach(wrap => {
+            const rect = wrap.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            const progress = Math.max(-1, Math.min(1, (center - viewportH / 2) / (viewportH / 2)));
+            wrap.style.transform = `translateY(${progress * -12}px)`;
+        });
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    update();
+}
+
+/* ==========================================================================
+   Background parallax — the dot grid drifts upward much slower than the
+   page scrolls, giving the background a sense of depth. Purely decorative,
+   so it's skipped entirely under reduced motion.
+   ========================================================================== */
+function initBackgroundParallax() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const dots = document.querySelector('.background-grid-dots');
+    if (!dots) return;
+
+    // The cursor-reveal layer paints the SAME 40px grid (just brighter, lit
+    // around the cursor) — it must shift identically or its lit dots stay
+    // frozen and stop lining up with the base grid. Its mask tracks the
+    // cursor via CSS vars, so we shift background-position, not transform.
+    const reveal = document.querySelector('.grid-reveal');
+
+    const SPEED = 0.18;
+    const PATTERN = 40; // dot grid period — offsets wrap seamlessly
+    let ticking = false;
+
+    const update = () => {
+        const offset = (window.scrollY * SPEED) % PATTERN;
+        dots.style.transform = `translateY(${-offset}px)`;
+        if (reveal) reveal.style.backgroundPosition = `0 ${-offset}px`;
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    update();
+}
+
+/* ==========================================================================
+   Stats counters (A4) — count up from 0 to the target once, first time the
+   hero stats bar is visible.
+   ========================================================================== */
+function initStatsCounter() {
+    const nums = document.querySelectorAll('.stat-num[data-count]');
+    if (!nums.length) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const animateCount = (el) => {
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        if (reduceMotion) {
+            el.textContent = target;
+            return;
+        }
+        const duration = 1200;
+        const start = performance.now();
+        const step = (now) => {
+            const t = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.round(eased * target);
+            if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCount(entry.target);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    nums.forEach(el => observer.observe(el));
+}
+
+/* ==========================================================================
+   Hero entrance — masked word reveal for the headline (A1) + fade-in for
+   eyebrow/subtitle/actions/stats (A2 handles the rotating phrase itself).
+   Waits for fonts to load so the reveal doesn't animate a fallback font.
+   ========================================================================== */
+function initHeroReveal() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const eyebrow = document.querySelector('.hero .eyebrow');
+    const line1 = document.querySelector('.hero-line-1');
+    const rotateWrap = document.querySelector('.hero-rotate-wrap');
+    const subtitle = document.querySelector('.hero-subtitle');
+    const actions = document.querySelector('.hero-actions');
+    const statsBar = document.querySelector('.stats-bar');
+    const fadeEls = [eyebrow, rotateWrap, subtitle, actions, statsBar].filter(Boolean);
+
+    if (reduceMotion) {
+        fadeEls.forEach(el => el.classList.add('active'));
+        return;
+    }
+
+    let wordSpans = [];
+    if (line1) {
+        const words = line1.textContent.trim().split(/\s+/);
+        line1.innerHTML = words
+            .map(w => `<span class="word-mask"><span class="word-inner">${w}</span></span>`)
+            .join(' ');
+        wordSpans = Array.from(line1.querySelectorAll('.word-mask'));
+    }
+
+    const start = () => {
+        wordSpans.forEach((w, i) => {
+            w.querySelector('.word-inner').style.transitionDelay = `${120 + i * 70}ms`;
+        });
+        if (eyebrow) eyebrow.style.transitionDelay = '0ms';
+        if (rotateWrap) rotateWrap.style.transitionDelay = `${120 + wordSpans.length * 70 + 80}ms`;
+        if (subtitle) subtitle.style.transitionDelay = '650ms';
+        if (actions) actions.style.transitionDelay = '750ms';
+        if (statsBar) statsBar.style.transitionDelay = '850ms';
+
+        requestAnimationFrame(() => {
+            wordSpans.forEach(w => w.classList.add('active'));
+            fadeEls.forEach(el => el.classList.add('active'));
+        });
+    };
+
+    let started = false;
+    const startOnce = () => {
+        if (started) return;
+        started = true;
+        start();
+    };
+
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(startOnce);
+        setTimeout(startOnce, 800);
+    } else {
+        startOnce();
+    }
 }
 
 /* ==========================================================================
@@ -257,20 +512,64 @@ function initSpotlightEffect() {
    ========================================================================== */
 function initNavbar() {
     const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelector('.nav-links');
     if (!navbar) return;
 
+    const BG_THRESHOLD = 80;
+    const HIDE_DELTA = 5;
+    let lastScrollY = window.scrollY;
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        const currentY = window.scrollY;
+        const menuOpen = navLinks && navLinks.classList.contains('mobile-open');
+
+        navbar.classList.toggle('scrolled', currentY > BG_THRESHOLD);
+
+        if (!menuOpen) {
+            if (currentY < BG_THRESHOLD || currentY < lastScrollY - HIDE_DELTA) {
+                navbar.classList.remove('nav-hidden');
+            } else if (currentY > lastScrollY + HIDE_DELTA) {
+                navbar.classList.add('nav-hidden');
+            }
         }
+
+        lastScrollY = currentY;
+    }, { passive: true });
+}
+
+/* ==========================================================================
+   Scroll-spy (A6) — keeps the current section's nav link underlined
+   ========================================================================== */
+function initScrollSpy() {
+    const navLinkMap = new Map();
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+        navLinkMap.set(a.getAttribute('href').slice(1), a);
     });
+    if (!navLinkMap.size) return;
+
+    const sections = Array.from(navLinkMap.keys())
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            navLinkMap.forEach(link => link.classList.remove('active-link'));
+            const link = navLinkMap.get(entry.target.id);
+            if (link) link.classList.add('active-link');
+        });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    sections.forEach(section => observer.observe(section));
 }
 
 /* ==========================================================================
    Mobile Menu Toggle
    ========================================================================== */
+const MENU_ICON = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>';
+const CLOSE_ICON = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+
 function initMobileMenu() {
     const btn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -278,134 +577,20 @@ function initMobileMenu() {
 
     btn.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('mobile-open');
-        btn.innerHTML = isOpen
-            ? '<i data-lucide="x"></i>'
-            : '<i data-lucide="menu"></i>';
-        if (window.lucide) lucide.createIcons();
+        btn.setAttribute('aria-expanded', String(isOpen));
+        btn.innerHTML = isOpen ? CLOSE_ICON : MENU_ICON;
     });
 
     // Close menu when a nav link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('mobile-open');
-            btn.innerHTML = '<i data-lucide="menu"></i>';
-            if (window.lucide) lucide.createIcons();
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = MENU_ICON;
         });
     });
 }
 
-/* ==========================================================================
-   Full Custom "Antigravity" Effect Port (Vanilla JS Physics)
-   ========================================================================== */
-function initAntigravity() {
-    const containers = document.querySelectorAll('.antigravity-container');
-
-    containers.forEach((container) => {
-        const elements = container.querySelectorAll('.antigravity-item');
-        if (!elements.length) return;
-
-        let mouseX = -1000;
-        let mouseY = -1000;
-        let isHovering = false;
-
-        // Physics State representing each element
-        const state = Array.from(elements).map(el => {
-            // mass affects spring and float phase
-            const mass = 1 + Math.random() * 1.5;
-            return {
-                el,
-                x: 0, y: 0,
-                vx: 0, vy: 0,
-                mass,
-                // store rect so we don't query DOM every frame
-                rect: { cx: 0, cy: 0 },
-                needsRectUpdate: true
-            };
-        });
-
-        const updateRects = () => {
-            state.forEach(item => {
-                const r = item.el.getBoundingClientRect();
-                item.rect.cx = r.left + r.width / 2;
-                item.rect.cy = r.top + r.height / 2;
-                item.needsRectUpdate = false;
-            });
-        };
-
-        // Spring / Physics settings — absolute minimum
-        const springStrength = 0.1;
-        const friction = 0.92;
-        const repulsionRadius = 50;
-        const repulsionStrength = 0.4;
-
-        const updatePhysics = (timestamp) => {
-            const time = timestamp * 0.001 || 0; // seconds
-
-            state.forEach((item) => {
-                // Return to origin (spring)
-                let fx = -item.x * springStrength;
-                let fy = -item.y * springStrength;
-
-                if (isHovering) {
-                    // Repel from cursor
-                    const dx = item.rect.cx - mouseX;
-                    const dy = item.rect.cy - mouseY;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < repulsionRadius && distance > 0) {
-                        const force = Math.pow((repulsionRadius - distance) / repulsionRadius, 2) * repulsionStrength;
-                        fx += (dx / distance) * force / item.mass;
-                        fy += (dy / distance) * force / item.mass;
-                    }
-                }
-
-                // Apply forces
-                item.vx = (item.vx + fx) * friction;
-                item.vy = (item.vy + fy) * friction;
-
-                item.x += item.vx;
-                item.y += item.vy;
-
-                // Float: barely noticeable breathing
-                const floatY = Math.sin(time * 0.8 + item.mass * 6) * 0.5;
-                const floatX = Math.cos(time * 0.6 + item.mass * 6) * 0.3;
-
-                const finalX = item.x + floatX;
-                const finalY = item.y + floatY;
-
-                // Rotational tilting mapped to actual position
-                const tiltX = finalY * 0.04;
-                const tiltY = -finalX * 0.04;
-
-                // Apply transform
-                item.el.style.transform = `translate3d(${finalX}px, ${finalY}px, 0) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-            });
-
-            requestAnimationFrame(updatePhysics);
-        };
-
-        container.addEventListener('mousemove', (e) => {
-            if (state[0].needsRectUpdate) updateRects();
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            isHovering = true;
-        });
-
-        container.addEventListener('mouseleave', () => {
-            isHovering = false;
-            mouseX = -1000;
-            mouseY = -1000;
-        });
-
-        container.addEventListener('mouseenter', () => {
-            // Flag rects for update on next hover to account for scroll
-            state.forEach(item => item.needsRectUpdate = true);
-        });
-
-        // Start animation loop
-        requestAnimationFrame(updatePhysics);
-    });
-}
 function initTimeline() {
     const processSection = document.getElementById('process');
     const timelineFill = document.getElementById('timeline-fill');
@@ -605,150 +790,30 @@ function initScrollProgress() {
    Magnetic Buttons Effect
    ========================================================================== */
 function initMagneticButtons() {
+    // Respect users who prefer no motion — skip the pull effect entirely
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
     // List of classes that should exhibit magnetic behavior
     const magneticEls = document.querySelectorAll('.btn, .logo, .nav-links a, .portfolio-item');
 
     magneticEls.forEach(el => {
+        // Big elements (portfolio windows) get a much gentler pull than
+        // small ones (buttons, links) so nothing feels like it "bounces".
+        const strength = el.classList.contains('portfolio-item') ? 0.04 : 0.12;
+
         el.addEventListener('mousemove', (e) => {
             const rect = el.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
 
-            // Move the element slightly towards the cursor (30% pull)
-            el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-            el.style.transition = 'transform 0.1s ease-out';
+            el.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+            el.style.transition = 'transform 0.2s ease-out';
         });
 
         el.addEventListener('mouseleave', () => {
             el.style.transform = 'translate(0, 0)';
-            el.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+            el.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
         });
     });
 }
 
-/* ==========================================================================
-   Cookie Banner logic
-   ========================================================================== */
-function initCookieBanner() {
-    const banner = document.getElementById('cookieBanner');
-    const btn = document.getElementById('acceptCookies');
-    if (!banner || !btn) return;
-
-    if (!localStorage.getItem('cookiesAccepted')) {
-        setTimeout(() => {
-            banner.classList.add('show');
-        }, 1500);
-    }
-
-    btn.addEventListener('click', () => {
-        localStorage.setItem('cookiesAccepted', 'true');
-        banner.classList.remove('show');
-    });
-}
-
-/* ==========================================================================
-   Particle Background
-   ========================================================================== */
-function initParticles() {
-    const canvas = document.getElementById('particles-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-
-    let mouseX = -9999, mouseY = -9999;
-    let width, height;
-
-    const resize = () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    const COUNT = 90;
-    const CONNECT_DIST = 120;
-    const REPEL_RADIUS = 140;
-    const REPEL_STRENGTH = 0.35;
-    const FRICTION = 0.88;
-    const SPRING = 0.012;
-
-    const particles = Array.from({ length: COUNT }, () => {
-        const hx = Math.random() * window.innerWidth;
-        const hy = Math.random() * window.innerHeight;
-        return {
-            x: hx,
-            y: hy,
-            homeX: hx,
-            homeY: hy,
-            vx: 0,
-            vy: 0,
-            size: Math.random() * 2 + 1.2,
-            opacity: Math.random() * 0.7 + 0.15,
-        };
-    });
-
-    // Re-anchor home positions on resize so dots stay distributed
-    window.addEventListener('resize', () => {
-        for (const p of particles) {
-            p.homeX = (p.homeX / (width || window.innerWidth)) * window.innerWidth;
-            p.homeY = (p.homeY / (height || window.innerHeight)) * window.innerHeight;
-        }
-    });
-
-    const animate = () => {
-        ctx.clearRect(0, 0, width, height);
-
-        for (const p of particles) {
-            // Cursor repulsion
-            const dx = p.x - mouseX;
-            const dy = p.y - mouseY;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < REPEL_RADIUS && dist > 0) {
-                const force = ((REPEL_RADIUS - dist) / REPEL_RADIUS) * REPEL_STRENGTH;
-                p.vx += (dx / dist) * force;
-                p.vy += (dy / dist) * force;
-            }
-
-            // Spring back to home position
-            p.vx += (p.homeX - p.x) * SPRING;
-            p.vy += (p.homeY - p.y) * SPRING;
-
-            p.vx *= FRICTION;
-            p.vy *= FRICTION;
-            p.x += p.vx;
-            p.y += p.vy;
-
-            // Draw dot
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255,255,255,${p.opacity})`;
-            ctx.fill();
-        }
-
-        // Draw connecting lines between close particles
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < CONNECT_DIST) {
-                    const alpha = (1 - dist / CONNECT_DIST) * 0.12;
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
-                    ctx.lineWidth = 0.5;
-                    ctx.stroke();
-                }
-            }
-        }
-
-        requestAnimationFrame(animate);
-    };
-
-    animate();
-}
