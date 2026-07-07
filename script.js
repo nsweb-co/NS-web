@@ -17,7 +17,7 @@ const translations = {
         hero_eyebrow: "Design & Development",
         hero_h1_pt1: "Rychlé a moderní weby",
         hero_h1_pt2: "bez kompromisů.",
-        hero_rotate_words: ["bez kompromisů.", "s čistým kódem.", "šité na míru.", "co prodávají.", "s důrazem na detail."],
+        hero_rotate_words: ["bez kompromisů.", "s čistým kódem.", "šité na míru.", "co prodávají.", "s důrazem na detail.", "s reklamou, co vydělává.", "se SEO, co je vidět.", "s chatbotem, co odpovídá."],
         hero_desc: "Jsme malé webové studio zaměřené na tvorbu moderních, minimalistických webů. Navrhujeme a vyvíjíme digitální prezentace s důrazem na výkon, typografii a čistý kód.",
         hero_btn: "Prozkoumat služby",
         hero_btn_write: "Napsat",
@@ -25,15 +25,28 @@ const translations = {
         services_label: "Služby",
         services_title_a: "Co přesně",
         services_title_em: "děláme",
-        card1_title: "Weby Od Nuly",
-        card1_sub: "Pro nové projekty",
-        card1_desc: "Navrhujeme a vyvíjíme moderní weby od základu. Čistý design, rychlý výkon a řešení na míru vašemu projektu.",
-        card2_title: "Redesigny",
-        card2_sub: "Pro weby, které už běží",
-        card2_desc: "Modernizujeme zastaralé weby a zjednodušujeme jejich strukturu. Výsledkem je přehlednější design a lepší uživatelský zážitek.",
-        card3_title: "Optimalizace & Správa",
-        card3_sub: "Pro maximální výkon",
-        card3_desc: "Zlepšíme rychlost, SEO a technickou kvalitu vašeho webu. Postaráme se o stabilní provoz a dlouhodobou správu.",
+        svc_web: "Tvorba webu",
+        svc_web_sub: "Moderní, rychlý web na míru — od návrhu po spuštění.",
+        svc_seo: "SEO",
+        svc_seo_sub: "Ať vás zákazníci najdou na Googlu — bez kouzel, s daty.",
+        svc_ads: "Reklama na sítích",
+        svc_ads_sub: "Facebook, Instagram a TikTok kampaně, které se zaplatí.",
+        svc_video: "Video & dron",
+        svc_video_sub: "Reklamní spoty a dronové záběry, které zaujmou.",
+        svc_chatbot: "AI chatbot",
+        svc_chatbot_sub: "Odpovídá zákazníkům 24/7 a sbírá poptávky, i když spíte.",
+        svc_hosting: "Hosting & správa",
+        svc_hosting_sub: "Hosting, zálohy a údržba — web, o který se nestaráte.",
+        svc_booking: "Rezervační systém",
+        svc_booking_sub: "Zákazník si vybere termín online, vy jen přijdete.",
+        svc_social: "Správa sítí",
+        svc_social_sub: "Obsah, publikace i komunikace — sítě, které žijí.",
+        svc_brand: "Branding",
+        svc_brand_sub: "Logo, barvy a vizuální styl, které dávají firmě tvář.",
+        svc_calls: "Zmeškané hovory",
+        svc_calls_sub: "Automatická SMS odpověď — žádná ztracená poptávka.",
+        svc_google: "Google profil",
+        svc_google_sub: "Buďte první, koho zákazníci z okolí najdou na mapě.",
         portfolio_label: "Naše práce",
         portfolio_title_a: "Naše",
         portfolio_title_em: "práce",
@@ -92,6 +105,7 @@ const translations = {
         form_send: "Odeslat zprávu",
         form_success: "Zpráva byla úspěšně odeslána! Ozveme se vám brzy.",
         form_error: "Omlouváme se, při odesílání došlo k chybě. Zkuste to prosím znovu.",
+        footer_menu: "Menu",
         footer_tagline: "Vyrobeno vlastníma rukama — žádná šablona."
     },
     en: {
@@ -107,7 +121,7 @@ const translations = {
         hero_eyebrow: "Engineering Elegance",
         hero_h1_pt1: "Quiet Luxury for your",
         hero_h1_pt2: "Digital Presence.",
-        hero_rotate_words: ["Digital Presence.", "Clean Code.", "Bold Ideas.", "Real Results.", "Fine Details."],
+        hero_rotate_words: ["Digital Presence.", "Clean Code.", "Bold Ideas.", "Real Results.", "Fine Details.", "Marketing.", "Brand.", "Growth."],
         hero_desc: "Two students. Endless ideas. We build sharp, minimalist websites that let your content breathe. No unnecessary noise—just clean code, perfect typography, and design that speaks for itself.",
         hero_btn: "Explore Services",
         hero_btn_write: "Write us",
@@ -115,15 +129,28 @@ const translations = {
         services_label: "Services",
         services_title_a: "What We",
         services_title_em: "Do",
-        card1_title: "Websites from Scratch",
-        card1_sub: "For new projects",
-        card1_desc: "We design and build clean, fast, and modern websites from the ground up. Maximum use of negative space and sharp typography.",
-        card2_title: "Redesigns",
-        card2_sub: "For sites already live",
-        card2_desc: "We strip your presentation of unnecessary layers. Transforming an outdated look into a premium, technologically polished experience.",
-        card3_title: "Optimization & Care",
-        card3_sub: "For maximum performance",
-        card3_desc: "We speed up your current site, improve SEO, and ensure smooth operation. Reliable background maintenance.",
+        svc_web: "Web Development",
+        svc_web_sub: "A modern, fast custom website — from design to launch.",
+        svc_seo: "SEO",
+        svc_seo_sub: "Get found on Google — no magic, just data.",
+        svc_ads: "Social Media Ads",
+        svc_ads_sub: "Facebook, Instagram & TikTok campaigns that pay off.",
+        svc_video: "Video & Drone",
+        svc_video_sub: "Promo videos and drone footage that grab attention.",
+        svc_chatbot: "AI Chatbot",
+        svc_chatbot_sub: "Answers customers 24/7 and collects leads while you sleep.",
+        svc_hosting: "Hosting & Care",
+        svc_hosting_sub: "Hosting, backups and maintenance — a site you never worry about.",
+        svc_booking: "Booking System",
+        svc_booking_sub: "Customers pick a slot online, you just show up.",
+        svc_social: "Social Media Management",
+        svc_social_sub: "Content, publishing and community — profiles that live.",
+        svc_brand: "Branding",
+        svc_brand_sub: "Logo, colors and a visual style that give your brand a face.",
+        svc_calls: "Missed-call Automation",
+        svc_calls_sub: "Automatic SMS reply — no lead left behind.",
+        svc_google: "Google Business Profile",
+        svc_google_sub: "Be the first local business customers find on the map.",
         portfolio_label: "Portfolio",
         portfolio_title_a: "Our",
         portfolio_title_em: "Work",
@@ -182,6 +209,7 @@ const translations = {
         form_send: "Send message",
         form_success: "Message sent successfully! We\'ll get back to you soon.",
         form_error: "Sorry, there was an error sending your message. Please try again.",
+        footer_menu: "Menu",
         footer_tagline: "Handmade — no template."
     }
 };
@@ -209,8 +237,15 @@ let currentLang = localStorage.getItem('ns-studio-clean-lang') || 'cs';
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-    updateLanguage(currentLang);
-    initLanguageSwitcher();
+    // Language switching exists only on the homepage — service subpages are
+    // Czech-only (no .lang-switcher), so skip i18n there entirely and force
+    // Czech for JS-generated strings (form feedback).
+    if (document.querySelector('.lang-switcher')) {
+        updateLanguage(currentLang);
+        initLanguageSwitcher();
+    } else {
+        currentLang = 'cs';
+    }
     initBlurReveals();
     initSpotlightEffect();
     initNavbar();

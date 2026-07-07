@@ -1943,3 +1943,174 @@ ul {
     }
 }
 
+/* ==========================================================================
+   Service subpages
+   ========================================================================== */
+/* Subpage hero — same atmosphere as the homepage hero (radial glow comes
+   from .hero::before), just shorter so the content starts sooner. */
+.subpage-hero {
+    min-height: 60vh;
+    padding-bottom: 4rem;
+}
+
+.subpage-hero .hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.hero-title em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.subpage-hero .hero-subtitle {
+    margin-bottom: 2.5rem;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-faint);
+}
+
+.breadcrumb a {
+    color: var(--text-faint);
+    transition: color 0.3s var(--ease-smooth);
+}
+
+.breadcrumb a:hover {
+    color: var(--text-primary);
+}
+
+.breadcrumb [aria-current="page"] {
+    color: var(--text-muted);
+}
+
+/* Offer cards on subpages — slightly tighter than the homepage bento */
+.subpage-offer .spotlight-content {
+    padding: 2.25rem 2rem;
+}
+
+.subpage-offer .icon-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.subpage-offer .card-text-wrapper h3 {
+    font-size: 1.15rem;
+}
+
+.subpage-offer .card-desc {
+    font-size: 0.9rem;
+}
+
+/* Homepage services index — compact linked cards for all 11 services */
+.services-index-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.spotlight-card--compact .spotlight-content {
+    padding: 1.6rem 1.5rem;
+}
+
+.spotlight-card--compact .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+}
+
+.spotlight-card--compact .icon-wrapper {
+    margin-bottom: 0;
+}
+
+.spotlight-card--compact .card-arrow {
+    color: var(--text-faint);
+    transition: transform 0.3s var(--ease-smooth), color 0.3s var(--ease-smooth);
+}
+
+.spotlight-card--compact:hover .card-arrow {
+    transform: translate(2px, -2px);
+    color: var(--text-primary);
+}
+
+.spotlight-card--compact h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+}
+
+.spotlight-card--compact .card-desc {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+    .services-index-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-index-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer link columns (Služby + Menu) */
+.footer-content {
+    align-items: flex-start;
+}
+
+.footer-links {
+    gap: 3.5rem;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col-title {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-faint);
+    margin-bottom: 0.9rem;
+}
+
+.footer-col-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.footer-col-links a {
+    width: max-content;
+}
+
+.footer-services .footer-col-links {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.55rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
