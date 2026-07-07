@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <script>document.documentElement.classList.add('js')</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI chatbot pro web | NS Web</title>
+    <meta name="description" content="AI chatbot pro váš web vytrénovaný na vašem obsahu. Odpovídá zákazníkům 24/7 v češtině a sbírá poptávky, i když spíte. Nasazení během pár dnů.">
+    <meta name="author" content="NS Web">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ns-web.com/sluzby/ai-chatbot.html">
+    <meta name="theme-color" content="#060607">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ns-web.com/sluzby/ai-chatbot.html">
+    <meta property="og:site_name" content="NS Web">
+    <meta property="og:title" content="AI chatbot pro web | NS Web">
+    <meta property="og:description" content="AI chatbot pro váš web vytrénovaný na vašem obsahu. Odpovídá zákazníkům 24/7 v češtině a sbírá poptávky, i když spíte. Nasazení během pár dnů.">
+    <meta property="og:image" content="https://ns-web.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NS Web – logo &lt;ns/&gt;">
+    <meta property="og:locale" content="cs_CZ">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI chatbot pro web | NS Web">
+    <meta name="twitter:description" content="AI chatbot pro váš web vytrénovaný na vašem obsahu. Odpovídá zákazníkům 24/7 v češtině a sbírá poptávky, i když spíte. Nasazení během pár dnů.">
+    <meta name="twitter:image" content="https://ns-web.com/og-image.png">
+    <meta name="twitter:image:alt" content="NS Web – logo &lt;ns/&gt;">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Service",
+            "@id": "https://ns-web.com/sluzby/ai-chatbot.html#service",
+            "name": "AI chatbot",
+            "description": "AI chatbot pro váš web vytrénovaný na vašem obsahu. Odpovídá zákazníkům 24/7 v češtině a sbírá poptávky, i když spíte. Nasazení během pár dnů.",
+            "url": "https://ns-web.com/sluzby/ai-chatbot.html",
+            "provider": {
+                "@id": "https://ns-web.com/#organization"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Česká republika"
+            },
+            "inLanguage": "cs"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://ns-web.com/sluzby/ai-chatbot.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Domů",
+                    "item": "https://ns-web.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Služby",
+                    "item": "https://ns-web.com/#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "AI chatbot"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Self-hosted fonts: Inter (variable) + Instrument Serif — critical latin-ext subsets preloaded -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var-ext.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/instrument-serif-italic-ext.woff2" crossorigin>
+</head>
+
+
+<body class="clean-theme">
+    <a href="#main" class="skip-link">Přeskočit na obsah</a>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- Ethereal Dot Grid Background -->
+    <div class="background-grid">
+        <div class="background-grid-dots"></div>
+    </div>
+
+    <!-- Cursor-reactive grid reveal + glow -->
+    <div class="grid-reveal"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">&lt;ns<span>/</span>web&gt;</a>
+            <ul class="nav-links">
+                <li><a href="/#services">Služby</a></li>
+                <li><a href="/#portfolio">Práce</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <button type="button" class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+    <!-- Subpage Hero -->
+    <header class="hero subpage-hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <nav class="breadcrumb" aria-label="Drobečková navigace">
+                    <a href="/">Domů</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#services">Služby</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page">AI chatbot</span>
+                </nav>
+                <div class="eyebrow hero-fade">Služba (05)</div>
+                <h1 class="hero-title">Web, který <em>odpovídá</em></h1>
+                <p class="hero-subtitle hero-fade">AI chatbot vytrénovaný na vašem obsahu odpovídá zákazníkům 24/7 a sbírá poptávky, i když spíte.</p>
+                <div class="hero-actions hero-fade">
+                    <a href="#kontakt" class="btn btn-primary btn-arrow">
+                        <span>Nezávazná poptávka</span>
+                        <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="tel:+420603931900" class="btn btn-outline hero-btn-call">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                        <span>Zavolat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Co nabízíme -->
+    <section class="section services subpage-offer">
+        <div class="container">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(01)</span>
+                    <span class="section-label">Nabídka</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">Co <em>nabízíme</em></h2>
+            </div>
+
+            <div class="spotlight-grid">
+                <div class="spotlight-card blur-reveal blur-delay-1">
+                    <span class="card-num">01</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Chatbot na míru</h3>
+                            <p class="card-desc">Vytrénovaný na vašich stránkách, ceníku i dokumentech.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-2">
+                    <span class="card-num">02</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Odpovědi 24/7</h3>
+                            <p class="card-desc">Česky i v dalších jazycích — kdykoli se zákazník zeptá.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-3">
+                    <span class="card-num">03</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="M19 16v6"/><path d="M22 19h-6"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Sběr poptávek</h3>
+                            <p class="card-desc">Z konverzace získá kontakt a předá vám ho jako poptávku.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-1">
+                    <span class="card-num">04</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Předání složitých dotazů</h3>
+                            <p class="card-desc">Co bot nezvládne, pošle vám na e-mail i s kontextem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-2">
+                    <span class="card-num">05</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Vzhled podle webu</h3>
+                            <p class="card-desc">Widget sladěný s vaší identitou, žádná cizí krabice.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-3">
+                    <span class="card-num">06</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Průběžné doučování</h3>
+                            <p class="card-desc">Znalosti bota aktualizujeme podle novinek ve vaší nabídce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Přínosy -->
+    <section class="section skills">
+        <div class="container">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(02)</span>
+                    <span class="section-label">Přínosy</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">K čemu vám to <em>bude</em></h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item blur-reveal blur-delay-1">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Žádná zmeškaná poptávka</h4>
+                        <p>Bot odpovídá i mimo otevírací dobu — o víkendu i v noci.</p>
+                    </div>
+                </div>
+                <div class="skill-item blur-reveal blur-delay-2">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Méně dotazů na telefon</h4>
+                        <p>Opakující se otázky vyřídí bot, vy se věnujete práci.</p>
+                    </div>
+                </div>
+                <div class="skill-item blur-reveal blur-delay-3">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Na jakýkoli web</h4>
+                        <p>Chatbot nasadíme i na stránky, které jsme nestavěli my.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Průběh -->
+    <section class="section process" id="process">
+        <div class="container container-sm">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(03)</span>
+                    <span class="section-label">Průběh</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">Jak to <em>probíhá</em></h2>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-fill" id="timeline-fill"></div>
+                </div>
+
+                <div class="timeline-steps">
+                    <div class="timeline-step step-1" data-step="1">
+                        <span class="step-num">01</span>
+                        <div class="step-content blur-reveal">
+                            <h3>Podklady</h3>
+                            <p>Projdeme váš web a materiály, ze kterých se bot naučí odpovídat.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step step-2" data-step="2">
+                        <span class="step-num">02</span>
+                        <div class="step-content blur-reveal">
+                            <h3>Trénink & nasazení</h3>
+                            <p>Vytrénujeme bota, sladíme vzhled s webem a nasadíme ho.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step step-3" data-step="3">
+                        <span class="step-num">03</span>
+                        <div class="step-content blur-reveal">
+                            <h3>Doladění</h3>
+                            <p>Sledujeme konverzace a průběžně doučujeme, co chybí.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container container-sm">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(04)</span>
+                    <span class="section-label">FAQ</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">Časté otázky</h2>
+            </div>
+
+            <div class="faq-list">
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span>Co když bot nezná odpověď?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>Přizná to a předá zákazníkovi kontakt na vás — případně rovnou pošle dotaz na váš e-mail. Nikdy si odpověď nevymýšlí.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span>Jak dlouho trvá nasazení?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>Podle rozsahu podkladů dny až zhruba dva týdny. Jednoduchý bot na menší web bývá hotový rychle.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span>Kolik chatbot stojí?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>Platí se jednorázové nasazení a malý měsíční provoz podle rozsahu. Konkrétní cenu vám řekneme po krátkém callu.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section class="section contact" id="kontakt">
+        <div class="container container-sm">
+            <div class="contact-box blur-reveal">
+                <div class="contact-content">
+                    <h2 class="contact-title"><span>Začněme tvořit</span><span class="contact-title-dot">.</span></h2>
+                    <p>Popište nám, co potřebujete — ozveme se do 24 hodin.</p>
+
+                    <!-- Formspree Contact Form -->
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mlgpbwbj" method="POST">
+                        <input type="hidden" name="sluzba" value="AI chatbot">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Jméno</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Jan Novák" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">E-mail</label>
+                                <input type="email" id="contact-email" name="email" placeholder="jan@firma.cz" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-msg">Zpráva</label>
+                            <textarea id="contact-msg" name="message" rows="4" placeholder="Popište váš projekt..."
+                                required></textarea>
+                        </div>
+                        <div id="form-message" class="form-message"></div>
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <span>Odeslat zprávu</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </button>
+                    </form>
+
+                    <p class="contact-alt">nebo napište přímo: <a
+                            href="mailto:nutiljkb@gmail.com">nutiljkb@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container container-sm">
+            <div class="footer-content">
+                <div class="footer-wordmark">&lt;ns<span>/</span>web&gt;</div>
+                <div class="footer-links">
+                    <div class="footer-col footer-services">
+                        <span class="footer-col-title">Služby</span>
+                        <div class="footer-col-links">
+                        <a href="/sluzby/tvorba-webu.html">Tvorba webu</a>
+                        <a href="/sluzby/seo.html">SEO</a>
+                        <a href="/sluzby/reklama-na-socialnich-sitich.html">Reklama na sítích</a>
+                        <a href="/sluzby/video-a-dron.html">Video & dron</a>
+                        <a href="/sluzby/ai-chatbot.html">AI chatbot</a>
+                        <a href="/sluzby/hosting.html">Hosting & správa</a>
+                        <a href="/sluzby/rezervacni-system.html">Rezervační systém</a>
+                        <a href="/sluzby/sprava-socialnich-siti.html">Správa sítí</a>
+                        <a href="/sluzby/branding.html">Branding</a>
+                        <a href="/sluzby/automatizace-zmeskanych-hovoru.html">Zmeškané hovory</a>
+                        <a href="/sluzby/google-firemni-profil.html">Google profil</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">Menu</span>
+                        <div class="footer-col-links">
+                            <a href="/#services">Služby</a>
+                            <a href="/#portfolio">Portfolio</a>
+                            <a href="/#team">Tým</a>
+                            <a href="/#faq">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottomLine">
+                <p>&copy; 2026 NS Web</p>
+                <p class="footer-tagline">Vyrobeno vlastníma rukama — žádná šablona.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
