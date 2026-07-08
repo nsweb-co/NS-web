@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>document.documentElement.classList.add('js')</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom Web Development | NS Web</title>
+    <meta name="description" content="Custom, modern website development — from design to launch on your domain. Fast, responsive, SEO-ready websites from CZK 5,000, online in 2–3 weeks.">
+    <meta name="author" content="NS Web">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ns-web.com/en/sluzby/tvorba-webu.html">
+    <link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/tvorba-webu.html">
+    <link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/tvorba-webu.html">
+    <link rel="alternate" hreflang="x-default" href="https://ns-web.com/sluzby/tvorba-webu.html">
+    <meta name="theme-color" content="#060607">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ns-web.com/en/sluzby/tvorba-webu.html">
+    <meta property="og:site_name" content="NS Web">
+    <meta property="og:title" content="Custom Web Development | NS Web">
+    <meta property="og:description" content="Custom, modern website development — from design to launch on your domain. Fast, responsive, SEO-ready websites from CZK 5,000, online in 2–3 weeks.">
+    <meta property="og:image" content="https://ns-web.com/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="NS Web – logo &lt;ns/&gt;">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Custom Web Development | NS Web">
+    <meta name="twitter:description" content="Custom, modern website development — from design to launch on your domain. Fast, responsive, SEO-ready websites from CZK 5,000, online in 2–3 weeks.">
+    <meta name="twitter:image" content="https://ns-web.com/og-image.png">
+    <meta name="twitter:image:alt" content="NS Web – logo &lt;ns/&gt;">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Service",
+            "@id": "https://ns-web.com/en/sluzby/tvorba-webu.html#service",
+            "name": "Web development",
+            "description": "Custom, modern website development — from design to launch on your domain. Fast, responsive, SEO-ready websites from CZK 5,000, online in 2–3 weeks.",
+            "url": "https://ns-web.com/en/sluzby/tvorba-webu.html",
+            "provider": {
+                "@id": "https://ns-web.com/#organization"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Czech Republic"
+            },
+            "inLanguage": "en"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://ns-web.com/en/sluzby/tvorba-webu.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://ns-web.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Services",
+                    "item": "https://ns-web.com/#services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Web development"
+                }
+            ]
+        }
+    ]
+}
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Self-hosted fonts: Inter (variable) + Instrument Serif — critical latin-ext subsets preloaded -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var-ext.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/instrument-serif-italic-ext.woff2" crossorigin>
+</head>
+
+
+<body class="clean-theme">
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- Ethereal Dot Grid Background -->
+    <div class="background-grid">
+        <div class="background-grid-dots"></div>
+    </div>
+
+    <!-- Cursor-reactive grid reveal + glow -->
+    <div class="grid-reveal"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">&lt;ns<span>/</span>web&gt;</a>
+            <ul class="nav-links">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#portfolio">Work</a></li>
+                <li><a href="#kontakt">Contact</a></li>
+                <li class="lang-switcher">
+                    <a href="/sluzby/tvorba-webu.html" class="lang-btn" hreflang="cs">CZ</a>
+                    <span class="divider">/</span>
+                    <a href="/en/sluzby/tvorba-webu.html" class="lang-btn active" hreflang="en" aria-current="page">EN</a>
+                </li>
+            </ul>
+            <button type="button" class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+    <!-- Subpage Hero -->
+    <header class="hero subpage-hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="/">Home</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="/#services">Services</a>
+                    <span aria-hidden="true">/</span>
+                    <span aria-current="page">Web development</span>
+                </nav>
+                <div class="eyebrow hero-fade">Service (01)</div>
+                <h1 class="hero-title">Websites that <em>sell</em></h1>
+                <p class="hero-subtitle hero-fade">A modern, fast custom website — from design to launch on your domain.</p>
+                <div class="hero-actions hero-fade">
+                    <a href="#kontakt" class="btn btn-primary btn-arrow">
+                        <span>Get a quote</span>
+                        <svg class="btn-arrow-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="tel:+420603931900" class="btn btn-outline hero-btn-call">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+                        <span>Call us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Offer -->
+    <section class="section services subpage-offer">
+        <div class="container">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(01)</span>
+                    <span class="section-label">Offer</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">What we <em>offer</em></h2>
+            </div>
+
+            <div class="spotlight-grid">
+                <div class="spotlight-card blur-reveal blur-delay-1">
+                    <span class="card-num">01</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Websites from scratch</h3>
+                            <p class="card-desc">From design through code to launch on your domain.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-2">
+                    <span class="card-num">02</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Website redesign</h3>
+                            <p class="card-desc">We turn an outdated site into a modern presentation that sells.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-3">
+                    <span class="card-num">03</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Landing pages</h3>
+                            <p class="card-desc">Fast one-pagers for campaigns and new products.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-1">
+                    <span class="card-num">04</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Responsive design</h3>
+                            <p class="card-desc">Mobile first — your site looks great on every device.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-2">
+                    <span class="card-num">05</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>Performance & Core Web Vitals</h3>
+                            <p class="card-desc">Speed that both Google and your customers notice.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spotlight-card blur-reveal blur-delay-3">
+                    <span class="card-num">06</span>
+                    <div class="spotlight-content">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+                        </div>
+                        <div class="card-text-wrapper">
+                            <h3>CMS integration</h3>
+                            <p class="card-desc">Manage your own content, for example via Sanity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section skills">
+        <div class="container">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(02)</span>
+                    <span class="section-label">Benefits</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">What's in it <em>for you</em></h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-item blur-reveal blur-delay-1">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>Website in 2–3 weeks</h4>
+                        <p>From the first call to launch on your domain. Larger projects take 4–6 weeks.</p>
+                    </div>
+                </div>
+                <div class="skill-item blur-reveal blur-delay-2">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>No templates</h4>
+                        <p>Custom code — fast, clean and free of dead weight.</p>
+                    </div>
+                </div>
+                <div class="skill-item blur-reveal blur-delay-3">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </div>
+                    <div class="skill-info">
+                        <h4>SEO-ready from day one</h4>
+                        <p>Structure, speed and metadata prepared for search engines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section process" id="process">
+        <div class="container container-sm">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(03)</span>
+                    <span class="section-label">Process</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">How it <em>works</em></h2>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-fill" id="timeline-fill"></div>
+                </div>
+
+                <div class="timeline-steps">
+                    <div class="timeline-step step-1" data-step="1">
+                        <span class="step-num">01</span>
+                        <div class="step-content blur-reveal">
+                            <h3>Free intro call</h3>
+                            <p>We discuss what your business needs and propose a solution and price.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step step-2" data-step="2">
+                        <span class="step-num">02</span>
+                        <div class="step-content blur-reveal">
+                            <h3>Design & development</h3>
+                            <p>Precise design and clean code. You watch the site grow.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step step-3" data-step="3">
+                        <span class="step-num">03</span>
+                        <div class="step-content blur-reveal">
+                            <h3>Launch</h3>
+                            <p>We deploy to your domain, polish the details and hand over.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+        <div class="container container-sm">
+            <div class="section-header blur-reveal">
+                <div class="section-eyebrow">
+                    <span class="section-num">(04)</span>
+                    <span class="section-label">FAQ</span>
+                </div>
+                <div class="section-hairline"></div>
+                <h2 class="section-title">Common questions</h2>
+            </div>
+
+            <div class="faq-list">
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span>How much does a website cost?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>We price each project individually. A basic landing page starts from CZK 5,000, more complex presentation sites from CZK 10,000. Get in touch and we'll work it out.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span>How long does it take?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>A simple site is usually done in 2–3 weeks from the first call. For larger projects count on 4–6 weeks — it depends on scope and feedback speed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item blur-reveal blur-delay-1">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span>Can I edit the site myself?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>It depends on the solution. We prefer performant bespoke sites maintained fully by us, but we can deploy a reliable CMS (e.g. Sanity) if content management is a priority.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="kontakt">
+        <div class="container container-sm">
+            <div class="contact-box blur-reveal">
+                <div class="contact-content">
+                    <h2 class="contact-title"><span>Let's start building</span><span class="contact-title-dot">.</span></h2>
+                    <p>Tell us what you need — we'll get back to you within 24 hours.</p>
+
+                    <!-- Formspree Contact Form -->
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/mlgpbwbj" method="POST">
+                        <input type="hidden" name="sluzba" value="Tvorba webu">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-msg">Message</label>
+                            <textarea id="contact-msg" name="message" rows="4" placeholder="Describe your project..."
+                                required></textarea>
+                        </div>
+                        <div id="form-message" class="form-message"></div>
+                        <button type="submit" class="btn btn-primary form-submit">
+                            <span>Send message</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </button>
+                    </form>
+
+                    <p class="contact-alt">or email us directly: <a
+                            href="mailto:nutiljkb@gmail.com">nutiljkb@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container container-sm">
+            <div class="footer-content">
+                <div class="footer-wordmark">&lt;ns<span>/</span>web&gt;</div>
+                <div class="footer-links">
+                    <div class="footer-col footer-services">
+                        <span class="footer-col-title">Services</span>
+                        <div class="footer-col-links">
+                        <a href="/en/sluzby/tvorba-webu.html">Web development</a>
+                        <a href="/en/sluzby/seo.html">SEO</a>
+                        <a href="/en/sluzby/reklama-na-socialnich-sitich.html">Social media ads</a>
+                        <a href="/en/sluzby/video-a-dron.html">Video & drone</a>
+                        <a href="/en/sluzby/ai-chatbot.html">AI chatbot</a>
+                        <a href="/en/sluzby/hosting.html">Hosting & care</a>
+                        <a href="/en/sluzby/rezervacni-system.html">Booking system</a>
+                        <a href="/en/sluzby/sprava-socialnich-siti.html">Social media management</a>
+                        <a href="/en/sluzby/branding.html">Branding</a>
+                        <a href="/en/sluzby/automatizace-zmeskanych-hovoru.html">Missed-call automation</a>
+                        <a href="/en/sluzby/google-firemni-profil.html">Google Business Profile</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">Menu</span>
+                        <div class="footer-col-links">
+                            <a href="/#services">Services</a>
+                            <a href="/#portfolio">Portfolio</a>
+                            <a href="/#team">Team</a>
+                            <a href="/#faq">FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottomLine">
+                <p>&copy; 2026 NS Web</p>
+                <p class="footer-tagline">Handmade — no template.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/script.js"></script>
+</body>
+
+</html>
