@@ -237,14 +237,16 @@ let currentLang = localStorage.getItem('ns-studio-clean-lang') || 'cs';
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Language switching exists only on the homepage — service subpages are
-    // Czech-only (no .lang-switcher), so skip i18n there entirely and force
-    // Czech for JS-generated strings (form feedback).
-    if (document.querySelector('.lang-switcher')) {
+    // JS-driven i18n only applies to the homepage (data-i18n spans there get
+    // swapped on the fly). Service subpages are static per-language HTML
+    // with real CZ/EN links in .lang-switcher, so running updateLanguage()
+    // there would find no [data-i18n] to translate — just force Czech for
+    // JS-generated strings (form feedback) and skip the switcher wiring.
+    if (document.querySelector('[data-i18n]')) {
         updateLanguage(currentLang);
         initLanguageSwitcher();
     } else {
-        currentLang = 'cs';
+        currentLang = document.documentElement.lang === 'en' ? 'en' : 'cs';
     }
     initBlurReveals();
     initSpotlightEffect();
@@ -283,6 +285,13 @@ function updateLanguage(lang) {
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    // Service links (grid + footer) point at the CZ subpage by default —
+    // repoint them at the EN subpage tree while the homepage is in English.
+    document.querySelectorAll('[data-href-cs]').forEach(el => {
+        const href = el.getAttribute(lang === 'en' ? 'data-href-en' : 'data-href-cs');
+        if (href) el.setAttribute('href', href);
     });
 
     // Keep the rotating hero word in the active language
