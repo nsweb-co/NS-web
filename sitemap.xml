@@ -1,75 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://ns-web.com/</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/tvorba-webu.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/tvorba-webu.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/tvorba-webu.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/seo.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/seo.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/seo.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/reklama-na-socialnich-sitich.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/reklama-na-socialnich-sitich.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/reklama-na-socialnich-sitich.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/video-a-dron.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/video-a-dron.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/video-a-dron.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/ai-chatbot.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/ai-chatbot.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/ai-chatbot.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/hosting.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/hosting.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/hosting.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/rezervacni-system.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/rezervacni-system.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/rezervacni-system.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/sprava-socialnich-siti.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/sprava-socialnich-siti.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/sprava-socialnich-siti.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/branding.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/branding.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/branding.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/automatizace-zmeskanych-hovoru.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/automatizace-zmeskanych-hovoru.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/automatizace-zmeskanych-hovoru.html"/>
     </url>
     <url>
         <loc>https://ns-web.com/sluzby/google-firemni-profil.html</loc>
-        <lastmod>2026-07-07</lastmod>
+        <lastmod>2026-07-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/google-firemni-profil.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/google-firemni-profil.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/tvorba-webu.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/tvorba-webu.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/tvorba-webu.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/seo.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/seo.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/seo.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/reklama-na-socialnich-sitich.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/reklama-na-socialnich-sitich.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/reklama-na-socialnich-sitich.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/video-a-dron.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/video-a-dron.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/video-a-dron.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/ai-chatbot.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/ai-chatbot.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/ai-chatbot.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/hosting.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/hosting.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/hosting.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/rezervacni-system.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/rezervacni-system.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/rezervacni-system.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/sprava-socialnich-siti.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/sprava-socialnich-siti.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/sprava-socialnich-siti.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/branding.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/branding.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/branding.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/automatizace-zmeskanych-hovoru.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/automatizace-zmeskanych-hovoru.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/automatizace-zmeskanych-hovoru.html"/>
+    </url>
+    <url>
+        <loc>https://ns-web.com/en/sluzby/google-firemni-profil.html</loc>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="cs" href="https://ns-web.com/sluzby/google-firemni-profil.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ns-web.com/en/sluzby/google-firemni-profil.html"/>
     </url>
 </urlset>
