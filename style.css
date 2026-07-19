@@ -2114,3 +2114,89 @@ ul {
         gap: 2rem;
     }
 }
+
+/* ==========================================================================
+   Pricing packages (homepage) — three tiers linking down to the contact form
+   ========================================================================== */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.pricing-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.pricing-card .spotlight-content {
+    padding: 2.5rem 2rem;
+}
+
+.pricing-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+}
+
+.pricing-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 2.25rem;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.pricing-features svg {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: var(--accent);
+}
+
+.pricing-cta {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: color 0.3s var(--ease-smooth);
+}
+
+.pricing-cta svg {
+    transition: transform 0.3s var(--ease-smooth);
+}
+
+.pricing-card:hover .pricing-cta {
+    color: var(--accent);
+}
+
+.pricing-card:hover .pricing-cta svg {
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}

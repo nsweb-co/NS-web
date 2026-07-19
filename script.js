@@ -53,8 +53,8 @@ const translations = {
         portfolio_sub: "Vybrané projekty, které fungují v praxi",
         portfolio_cat_1: "Gastro · One-page",
         portfolio_cat_2: "Marketing · Kampaně",
-        portfolio_cat_3: "Blog · Fitness",
-        portfolio_cat_4: "SaaS · Landing page",
+        portfolio_cat_3: "Aplikace · Automatizace",
+        portfolio_cat_4: "AI · Webová aplikace",
         portfolio_cat_5: "Portfolio · Osobní web",
         portfolio_cat_6: "Gastro · Prezentace",
         portfolio_view_btn: "Zobrazit web",
@@ -69,6 +69,32 @@ const translations = {
         step3_desc: "Píšeme čistý kód. Důraz na ohromující výkon a plynulé interakce.",
         step4_title: "Launch",
         step4_desc: "Finální testování, nasazení na doménu a předání. Váš web jde do světa.",
+        pricing_label: "Balíčky",
+        pricing_title_a: "Kolik toho",
+        pricing_title_em: "necháte na nás",
+        pricing_sub: "Tři úrovně spolupráce, od samotného webu po kompletní péči o celou online prezentaci. Kliknutím na balíček nám rovnou napíšete.",
+        pricing_cta: "Chci tento balíček",
+        pack1_name: "Základní",
+        pack1_desc: "Moderní web na míru. Navrhneme, naprogramujeme a spustíme na vaší doméně.",
+        pack1_f1: "Web na míru od návrhu po spuštění",
+        pack1_f2: "Responzivní design (mobil first)",
+        pack1_f3: "Základní SEO od prvního dne",
+        pack1_f4: "Nasazení na vaši doménu",
+        pack2_name: "Pokročilý",
+        pack2_desc: "Web plus viditelnost. Postaráme se, aby vás zákazníci opravdu našli.",
+        pack2_f1: "Vše ze Základního balíčku",
+        pack2_f2: "Hosting, zálohy a pravidelná údržba",
+        pack2_f3: "SEO optimalizace",
+        pack2_f4: "Google firemní profil",
+        pack2_f5: "AI chatbot nebo rezervační systém",
+        pack3_name: "Kompletní",
+        pack3_desc: "Celá online prezentace se vším všudy, včetně sociálních sítí a reklamy.",
+        pack3_f1: "Vše z Pokročilého balíčku",
+        pack3_f2: "Obsah i publikace na sociálních sítích",
+        pack3_f3: "Reklama na Facebooku, Instagramu a TikToku",
+        pack3_f4: "Video a dronové záběry",
+        pack3_f5: "Branding a jednotný vizuál",
+        form_package_msg: "Dobrý den, mám zájem o balíček {name}.",
         contact_title: "Začněme tvořit",
         contact_subtitle: "Hledáte design, který nekřičí, ale rezonuje?",
         team_label: "Tým",
@@ -157,8 +183,8 @@ const translations = {
         portfolio_sub: "Proven concepts working in practice",
         portfolio_cat_1: "Restaurant · One-page",
         portfolio_cat_2: "Marketing · Campaigns",
-        portfolio_cat_3: "Blog · Fitness",
-        portfolio_cat_4: "SaaS · Landing page",
+        portfolio_cat_3: "App · Automation",
+        portfolio_cat_4: "AI · Web app",
         portfolio_cat_5: "Portfolio · Personal site",
         portfolio_cat_6: "Restaurant · Presentation site",
         portfolio_view_btn: "View website",
@@ -173,6 +199,32 @@ const translations = {
         step3_desc: "We write clean code. Emphasis on stunning performance and smooth interactions.",
         step4_title: "Launch",
         step4_desc: "Final testing, domain deployment, and handover. Your website goes live.",
+        pricing_label: "Packages",
+        pricing_title_a: "How much we",
+        pricing_title_em: "take off your plate",
+        pricing_sub: "Three levels of collaboration, from a standalone website to full care of your entire online presence. Click a package to write to us.",
+        pricing_cta: "I want this package",
+        pack1_name: "Starter",
+        pack1_desc: "A modern custom website, designed, coded and launched on your domain.",
+        pack1_f1: "Custom website from design to launch",
+        pack1_f2: "Responsive, mobile-first design",
+        pack1_f3: "SEO-ready from day one",
+        pack1_f4: "Deployed to your domain",
+        pack2_name: "Advanced",
+        pack2_desc: "Website plus visibility. We make sure customers actually find you.",
+        pack2_f1: "Everything in Starter",
+        pack2_f2: "Hosting, backups & regular maintenance",
+        pack2_f3: "SEO optimization",
+        pack2_f4: "Google Business Profile",
+        pack2_f5: "AI chatbot or booking system",
+        pack3_name: "Complete",
+        pack3_desc: "Your entire online presence, social media and ads included.",
+        pack3_f1: "Everything in Advanced",
+        pack3_f2: "Social media content and publishing",
+        pack3_f3: "Facebook, Instagram & TikTok ads",
+        pack3_f4: "Video & drone footage",
+        pack3_f5: "Branding & unified visuals",
+        form_package_msg: "Hi, I'm interested in the {name} package.",
         contact_title: "Let's start building",
         contact_subtitle: "Looking for a design that resonates without shouting?",
         team_label: "Team",
@@ -256,6 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCursor();
     initFAQ();
     initContactForm();
+    initPricingCards();
     initScrollProgress();
     initMagneticButtons();
     initRotatingWords();
@@ -812,6 +865,33 @@ function initContactForm() {
                 msgEl.className = 'form-message';
             }, 6000);
         }
+    });
+}
+
+/* ==========================================================================
+   Pricing package cards — the anchor scrolls to #contact, we tag the
+   Formspree submission and pre-fill the message with the chosen package
+   ========================================================================== */
+function initPricingCards() {
+    const cards = document.querySelectorAll('.pricing-card');
+    const packageInput = document.getElementById('form-balicek');
+    const messageEl = document.getElementById('contact-msg');
+    if (!cards.length || !packageInput) return;
+
+    let lastPrefill = '';
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const nameEl = card.querySelector('.pricing-name');
+            const name = nameEl ? nameEl.textContent.trim() : '';
+            packageInput.value = name;
+
+            // Pre-fill the message, but never overwrite what the user typed
+            if (messageEl && (messageEl.value.trim() === '' || messageEl.value === lastPrefill)) {
+                const tpl = translations[currentLang].form_package_msg || 'Mám zájem o balíček {name}.';
+                lastPrefill = tpl.replace('{name}', name);
+                messageEl.value = lastPrefill;
+            }
+        });
     });
 }
 
